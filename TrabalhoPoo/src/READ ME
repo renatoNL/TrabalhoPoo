@@ -1,0 +1,10 @@
+# Model:
+Responsável por armazenar e manipular os dados da aplicação, incluindo a lógica de negócios e regras de validação.
+
+# View:
+Responsável por apresentar os dados ao usuário, geralmente através de uma interface gráfica, e pode ser manipulada
+para exibir diferentes vistas dos dados.
+
+# Controller:
+Atua como intermediário entre o Modelo e a Visão, recebendo solicitações do usuário (através da Visão), interage com o
+Modelo para realizar as operações necessárias e então atualiza a Visão para refletir os resultados.
