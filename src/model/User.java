@@ -16,7 +16,7 @@ public class User {
         this.biografia = biografia;
     }
 
-    public User(){
+    public User() {
 
     }
 
