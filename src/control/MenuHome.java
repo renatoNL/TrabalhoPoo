@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src/control/MenuHome.java
 package control;
-
 
 public class MenuHome {
 
@@ -18,25 +16,3 @@ public class MenuHome {
     }
 
 }
-=======
-package control;
-
-public class MenuHome {
-
-    public void telaInicial (){
-        /*
-        * Mostra as opções:
-        *
-        * 1 - Entrar
-        * 2 - Cadastrar
-        * 3 - Sair
-        */
-    }
-
-    public String menu() {
-        System.out.println();
-        return "oi";
-    }
-
-}
->>>>>>> parent of 0ea4921 (Organização):TrabalhoPoo/src/control/MenuHome.java

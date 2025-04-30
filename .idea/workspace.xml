@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/anotacoes.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/MenuHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/MenuHome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/UserEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/UserEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ideias.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Musicboxd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745972830995</updated>
-      <workItem from="1745972833317" duration="2523000" />
+      <workItem from="1745972833317" duration="2848000" />
     </task>
     <servers />
   </component>
