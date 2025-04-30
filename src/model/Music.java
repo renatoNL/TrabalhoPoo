@@ -8,14 +8,15 @@ public class Music {
     private String genero;
     private String album;
 
-    public Music(int musicaID, String nomeMusica, String artista, String genero, String album){
+    public Music(int musicaID, String nomeMusica, String artista, String genero, String album) {
         this.musicaID = musicaID;
         this.nomeMusica = nomeMusica;
         this.artista = artista;
         this.genero = genero;
         this.album = album;
     }
-    public Music(){
+
+    public Music() {
 
     }
 

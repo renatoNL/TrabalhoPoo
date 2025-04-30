@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/MenuHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/MenuHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/PublicationControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/PlaylistControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/PlaylistControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/UserEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/UserEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Musicboxd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745972830995</updated>
-      <workItem from="1745972833317" duration="2848000" />
+      <workItem from="1745972833317" duration="6929000" />
     </task>
     <servers />
   </component>

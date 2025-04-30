@@ -1,25 +1,21 @@
 package control;
 
-import model.Music;
 import model.Playlist;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PlaylistControl extends Music {
+public class PlaylistControl extends Playlist {
 
-    Playlist playlist = new Playlist();
-    Scanner scn = new Scanner (System.in);
+    Scanner scn = new Scanner(System.in);
+    List<String> playlist = new ArrayList<>();
 
-    public void CreatePlaylist() {
+    public void createPlaylist() {
 
-        List<String> playlist = new ArrayList<>();
-
-        Scanner scn = new Scanner(System.in);
         System.out.print("Informe o nome da sua playlist: ");
         setNomeMusica(scn.nextLine());
-//        playlist.add("Playlist  " + setNomeMusica());
+//      playlist.add("Playlist  " + setNomeMusica());
 
         System.out.println("Informe agora os detalhes das músicas que deseja inserir na Playlist");
 
@@ -41,7 +37,7 @@ public class PlaylistControl extends Music {
 
         System.out.println("\nPlaylist Criada! ");
 
-        for (String playlists: playlist) {
+        for (String playlists : playlist) {
 
             System.out.println(playlists);
 
@@ -52,8 +48,7 @@ public class PlaylistControl extends Music {
 
     }
 
-
-    public void EditarPlaylist() {
+    public void editPlaylist() {
 
     }
 
