@@ -9,20 +9,21 @@ import java.util.List;
 
 public class Playlist extends Music {
 
+	private int playlistID;
 	private List<String> playlist;
 
-	private String nomePlaylist;
+	private String playlistName;
 
-	public Playlist(List<String> playlist, String nomePlaylist) {
-		this.playlist = playlist;
-		this.nomePlaylist = nomePlaylist;
-	}
+//	public Playlist(List<String> playlist, String playlistName) {
+//		this.playlist = playlist;
+//		this.playlistName = playlistName;
+//	}
 
 	public Playlist() {
 
 	}
 
-	public List<String> getPlaylist() {
+	public List<String> getPlaylist() { //Lista com playlists criadas
 		return playlist;
 	}
 
@@ -30,11 +31,9 @@ public class Playlist extends Music {
 		this.playlist = playlist;
 	}
 
-	public String getNomePlaylist() {
-		return nomePlaylist;
+	public void setPlaylistName(String playlistName){
+		this.playlistName = playlistName;
 	}
 
-	public void setNomePlaylist(String nomePlaylist) {
-		this.nomePlaylist = nomePlaylist;
-	}
+
 }
