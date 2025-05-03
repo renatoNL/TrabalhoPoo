@@ -2,51 +2,51 @@ package model;
 
 public class Music {
 
-    private int musicaID;
-    private String nomeMusica;
-    private String artista;
-    private String genero;
+    private int musicID;
+    private String songName;
+    private String artist;
+    private String genre;
     private String album;
 
-    public Music(int musicaID, String nomeMusica, String artista, String genero, String album){
-        this.musicaID = musicaID;
-        this.nomeMusica = nomeMusica;
-        this.artista = artista;
-        this.genero = genero;
+    public Music(int musicID, String songName, String artist, String genre, String album){
+        this.musicID = musicID;
+        this.songName = songName;
+        this.artist = artist;
+        this.genre = genre;
         this.album = album;
     }
     public Music(){
 
     }
 
-    public String getNomeMusica() {
-        return nomeMusica;
+    public String getSongName() {
+        return songName;
     }
 
-    public void setNomeMusica(String nomeMusica) {
-        this.nomeMusica = nomeMusica;
+    public void setSongName(String songName) {
+        this.songName = songName;
     }
 
     // MusicaID nao deve ter metodo GET
 
-    public void setMusicaID(int musicaID) {
-        this.musicaID = musicaID;
+    public void setMusicID(int musicID) {
+        this.musicID = musicID;
     }
 
-    public String getArtista() {
-        return artista;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setArtista(String artista) {
-        this.artista = artista;
+    public void setArtist(String artista) {
+        this.artist = artist;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getAlbum() {

@@ -1,41 +1,51 @@
 package model;
 
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Publication {
 
+    private List<String> publication;
     private int publicationID;
-    private String descricao;
-    private int avaliacao;
+
+    private String description;
+    private int rating;
     private boolean like;
 
-    public Publication(int PublicationID,String Descricao,int Avaliacao,boolean Like) {
-        this.publicationID = publicationID;
-        this.descricao = descricao;
-        this.avaliacao = avaliacao;
-        this.like = like;
-    }
+//    public Publication(List<String> publication,int PublicationID,String description,int rating,boolean Like) {
+//        this.publication = publication;
+//        this.publicationID = publicationID;
+//        this.description = description;
+//        this.rating = rating;
+//        this.like = like;
+//    }
 
     public Publication(){
 
+    }
+    public List<String> getPublication(){
+        return publication;
     }
 
     public void setPublicationID(int publicationID){
         this.publicationID = publicationID;
     }
 
-    public void setDescricao(String descricao){
-        this.descricao = descricao;
+    public void setDescription(String description){
+        this.description = description;
     }
 
-     public String getDescricao(){
-        return descricao;
+     public String getDescription(){
+        return description;   //Comentário da publicação
      }
 
-    public void setAvaliacao(int avaliacao){
-        this.avaliacao = avaliacao;
+    public void setRating(int rating){
+        this.rating = rating;
     }
 
-    public int getAvaliacao(){
-        return avaliacao;
+    public int getRating(){
+        return rating;   //Avaliação da publicação
     }
 
     public void setLike(boolean like){
@@ -43,6 +53,6 @@ public class Publication {
     }
 
     public boolean getLike(){
-        return like;
+        return like;    //Curtida da publicação
     }
 }

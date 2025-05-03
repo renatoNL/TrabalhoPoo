@@ -2,59 +2,70 @@ package model;
 
 public class User {
 
-    private int usuarioID;
-    private String nome;
-    private String biografia;
+    private int userID;
+    private String name;
+    private String bio;
     private String email;
-    private String sexo;
+    private String gender;
+    private String password;
 
-    public User(int usuarioID, String sexo, String email, String nome, String biografia) {
-        this.usuarioID = usuarioID;
-        this.sexo = sexo;
+    public User(int userID, String gender, String email, String name, String bio) {
+        this.userID = userID;
+        this.gender = gender;
         this.email = email;
-        this.nome = nome;
-        this.biografia = biografia;
+        this.name = name;
+        this.bio = bio;
+        this.password = password;
     }
 
-    public User(){
+    public User(String name, String email, String password){
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 
+    public User() {
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     // Nao deve haver o metodo get para o ID do usuario
 
-    public void setUsuarioID(int usuarioID) {
-        this.usuarioID = usuarioID;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
+    }//Coletar o nome do Usuário
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public String getBio() {
+        return bio;
+    }//Biografia do Usuário
 
-    public String getBiografia() {
-        return biografia;
-    }
-
-    public void setBiografia(String biografia) {
-        this.biografia = biografia;
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 
     public String getEmail() {
         return email;
-    }
+    }//Email do Usuário
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
+    public String getGender() {
+        return gender;
+    }//Gênero do usuário
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
