@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/control/PublicationControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/PlaylistControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/PlaylistControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/UserEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/UserEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Musicboxd.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "renatoNL"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/renatoNL/TrabalhoPoo.git",
+    "accountId": "fb77715e-7200-4f98-bae5-69325fed70e8"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2wQTWXQUzmsrDNlwU0XvEmVmhI2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Musicboxd.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Renato\Documents\Code\estudos\Cadeiras Segundo Periodo\poo\Trabalhos\RepositorioPOO\TrabalhoPoo\src" />
+      <recent name="C:\Users\Renato\Documents\Code\estudos\Cadeiras Segundo Periodo\poo\Trabalhos\RepositorioPOO\TrabalhoPoo" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="" />
+      <created>1745972830995</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745972830995</updated>
+      <workItem from="1745972833317" duration="6929000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
