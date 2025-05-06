@@ -10,29 +10,42 @@ import java.util.List;
 public class Playlist extends Music {
 
 	private int playlistID;
-	private List<String> playlist;
-
 	private String playlistName;
+	private List<String> userPlaylist;
 
-//	public Playlist(List<String> playlist, String playlistName) {
-//		this.playlist = playlist;
-//		this.playlistName = playlistName;
-//	}
+	public Playlist(List<String> userPlaylist, String playlistName, int playlistID) {
+		this.userPlaylist = userPlaylist;
+		this.playlistName = playlistName;
+		this.playlistID = playlistID;
+	}
 
-	public Playlist() {
+	public Playlist(){
 
 	}
 
-	public List<String> getPlaylist() { //Lista com playlists criadas
-		return playlist;
+
+	public void setPlaylistID(int playlistID){
+		this.playlistID = playlistID;
 	}
 
-	public void setPlaylist(List<String> playlist) {
-		this.playlist = playlist;
+	public int getPlaylistID() {
+		return playlistID;
+	}
+
+	public List<String> getUserPlaylist() { //Lista com playlists criadas
+		return userPlaylist;
+	}
+
+	public void setPlaylist(List<String> userPlaylist) {
+		this.userPlaylist = userPlaylist;
 	}
 
 	public void setPlaylistName(String playlistName){
 		this.playlistName = playlistName;
+    }
+
+	public String getPlaylistName(){
+		return playlistName;
 	}
 
 

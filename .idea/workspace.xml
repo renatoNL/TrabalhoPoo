@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/control/PublicationControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/UserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/PlaylistControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/PlaylistControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/UserEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/UserEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Musicboxd.java" afterDir="false" />
-    </list>
+    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,22 +20,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "renatoNL"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;renatoNL&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/renatoNL/TrabalhoPoo.git",
-    "accountId": "fb77715e-7200-4f98-bae5-69325fed70e8"
+    "accountId": "9c68873a-60cd-4223-834a-7bb7187beeab"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2wQTWXQUzmsrDNlwU0XvEmVmhI2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,7 +48,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/miguel/OneDrive/Desktop/faculdade/2PERIODO/poo/poo-musicaAPP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,11 +69,12 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="" />
@@ -97,6 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745972830995</updated>
       <workItem from="1745972833317" duration="6929000" />
+      <workItem from="1746479243717" duration="62000" />
     </task>
     <servers />
   </component>
