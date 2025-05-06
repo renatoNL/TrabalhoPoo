@@ -1,0 +1,15 @@
+Orientações:
+1. Classes e metódos devem ser escritos em inglês.
+2. Comentar os códigos para ser de melhor entendimento para os colaboradores.
+3. Nomes de metódos e declarações descritivas.
+
+Implementações:
+1. Hashmap
+2. ID nas musicas e playlist
+
+Anotações:
+- Renato 29/04
+    Sei que não foi muita coisa, mas foi questão de honra ajustar a questão do gitignore, conclui essa parte e
+dei uma mexida no corpo de cada classe. Acredito que após terminarmos essa parte que seria o core da API seria bom se
+nós pensarmos um pouco em mais algumas coisas que seriam interessantes para nosso projeto, e dar uma olhada na parte da
+integração com o banco de dados.
