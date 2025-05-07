@@ -1,29 +1,25 @@
 package Musicboxd.control;
 
-import model.*;
+import Musicboxd.model.*;
+import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+@Controller
 public class PlaylistControl extends Music {
-
-
 
     Playlist playlistUser = new Playlist();
 
-    Scanner scn = new Scanner (System.in);
-
-
     public void CreatePlaylist() {
-
 
         List<String> playlist = new ArrayList<>();
 
         Scanner scn = new Scanner(System.in);
         System.out.print("Informe o nome da sua playlist: ");
         playlistUser.setPlaylistName(scn.nextLine());
-       playlist.add("Playlist  " + playlistUser.getPlaylistName());
+        playlist.add("Playlist  " + playlistUser.getPlaylistName());
 
         System.out.print("Quantas músicas deseja inserir em sua Playlist? : ");
         int quantitySongs = scn.nextInt(); //variavel exclusiva para looping de inserções.
@@ -38,7 +34,7 @@ public class PlaylistControl extends Music {
 
          System.out.print("Artista = ");
          setArtist(scn.nextLine());
-        playlist.add("Artista = " + getArtist());
+         playlist.add("Artista = " + getArtist());
 
         System.out.print("Genero = ");
         setGenre(scn.nextLine());
@@ -52,10 +48,19 @@ public class PlaylistControl extends Music {
 
         }
 
+       
+       
+
+
+        // 1- allPlayListsUser - É uma lista de listas, toda playlist criada será inserida nessa lista "pai"
+        // 2- cada playlist terá seu id unico (pode ser uma variavel local msm)
+
+
         // List<Playlist> allPlayListsUser = new ArrayList<>(); // FUTURA list para inserir playlists criadas
 
-        //     allPlayListsUser.add(new Playlist(playlist, playlistUser.getPlaylistName(), 1 (mudar o id dps)); //Lista com playlists criadas pelo usuario,
-        //                                                                                       //cada uma possui id e nome, e claro, seu conteudo (inserido dentro da lista playlist).
+        //   allPlayListsUser.add(new Playlist(playlist, playlistUser.getPlaylistName(), 1 (mudar o id dps))
+        //   ;Lista com playlists criadas pelo usuario
+        //   cada uma possui id e nome, e claro, seu conteudo (inserido dentro da lista playlist).
         //        for (Playlist playlists : allPlayListsUser) {
         //
         //            System.out.println(playlists.getUserPlaylist());

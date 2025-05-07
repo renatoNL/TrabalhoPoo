@@ -1,7 +1,7 @@
 package Musicboxd.control;
 
-import control.*;
-import model.*;
+import Musicboxd.control.*;
+import Musicboxd.model.*;
 
 public class UserProfileControl extends User {
 

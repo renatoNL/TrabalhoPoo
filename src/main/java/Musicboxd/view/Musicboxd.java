@@ -1,7 +1,7 @@
 package Musicboxd.view;
 
-import control.*;
-import model.*;
+import Musicboxd.control.*;
+import Musicboxd.model.*;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class Musicboxd {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        MenuHome menuHome = new MenuHome();
+        MenuHomeControl menuHome = new MenuHomeControl();
 
         System.out.println("Seja Bem-Vindo ao Musicboxsd!");
 

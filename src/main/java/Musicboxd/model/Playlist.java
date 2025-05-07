@@ -2,47 +2,23 @@ package Musicboxd.model;
 
 import java.util.List;
 
+import jakarta.persistence.*;
+import lombok.*;
 
-public class Playlist extends Music {
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
-	private int playlistID;
-	private String playlistName;
-	private List<String> userPlaylist;
+public class Playlist {
 
-	public Playlist(List<String> userPlaylist, String playlistName, int playlistID) {
-		this.userPlaylist = userPlaylist;
-		this.playlistName = playlistName;
-		this.playlistID = playlistID;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int playlistID;
 
-	public Playlist(){
-
-	}
-
-
-	public void setPlaylistID(int playlistID){
-		this.playlistID = playlistID;
-	}
-
-	public int getPlaylistID() {
-		return playlistID;
-	}
-
-	public List<String> getUserPlaylist() { //Lista com playlists criadas
-		return userPlaylist;
-	}
-
-	public void setPlaylist(List<String> userPlaylist) {
-		this.userPlaylist = userPlaylist;
-	}
-
-	public void setPlaylistName(String playlistName){
-		this.playlistName = playlistName;
-    }
-
-	public String getPlaylistName(){
-		return playlistName;
-	}
-
+    @ElementCollection
+    private List<String> userPlaylist;
+    private String playlistName;
 
 }
