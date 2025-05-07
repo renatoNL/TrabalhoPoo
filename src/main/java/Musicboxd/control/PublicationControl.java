@@ -9,14 +9,16 @@ import java.util.Scanner;
 
 @Controller
 public class PublicationControl extends Publication {
+
+    private List<Publication> allPublications= new ArrayList<>();
+
     //devo adicionar a classe musica aqui?para comentar especificamente na musica
     Scanner scn = new Scanner(System.in);
-    Publication publication = new Publication();
-
-    private List<Publication> allPublications = new ArrayList<>();
+    private boolean like;
 
     public void CreatePublication() {
 
+        Publication newPublication = new Publication();
         List<String> publication = new ArrayList<>();
 
         System.out.println("=== Deseja escrever um comentário? ===");
@@ -24,15 +26,18 @@ public class PublicationControl extends Publication {
         if (answer.equalsIgnoreCase("sim")) {
 
             System.out.println("\n---------------" + "Escreva o seu comentário: ");
-            setComment(scn.nextLine());
-            publication.add("Comentário: " + getComment() + ("\n---------------"));//mostra o comentário na hora da saída dos dados.
+            newPublication.setComment(scn.nextLine());
+            publication.add("Comentário: " + newPublication.getComment() + ("\n---------------"));//mostra o comentário na hora da saída dos dados.
 
         }
 
         System.out.println("Deixe sua avaliação");
-        setRating(scn.nextInt());
-        publication.add("Avaliação: " + getRating() + ("\n---------------"));
-        //#toDo -> lembrar de adicionar um limite e um minimo de avaliação
+        newPublication.setRating(scn.nextInt());
+        if (getRating() <= 0)
+            setRating (1);
+        else if (getRating() > 10 )
+            setRating(10);
+        publication.add("Avaliação: " + newPublication.getRating() + ("\n---------------"));
 
         scn.nextLine();//consome a quebra de linha deixada pelo nextInt
 
@@ -40,11 +45,13 @@ public class PublicationControl extends Publication {
         answer = scn.nextLine();
 
         if (answer.equalsIgnoreCase("SIM")) {//condicional para verificar se o usuario quer deixar uma curtida
-            setLike(true);
+            newPublication.setLike(true);
             System.out.println("Like");
 
         }
         System.out.println("Comentário adicionado!");
+
+        allPublications.add(newPublication);
 
         for (String publications : publication) {
             System.out.println(publications);
@@ -83,7 +90,6 @@ public class PublicationControl extends Publication {
     public void FeatureInProfile() {
 
     }
-
 
 
 }
