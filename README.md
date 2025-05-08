@@ -7,10 +7,10 @@
 - **Contexto:** Desenvolvido como atividade avaliativa (AT) para o curso de Análise e Desenvolvimento de Sistemas (ADS).  
 - **Objetivo Principal:** Criar uma aplicação de música utilizando a linguagem Java, aplicando conceitos de Programação Orientada a Objetos (POO).  
 - **Equipe de Desenvolvimento:**
-  - 👨‍💻 Leonardo Antonio
+  - 👨‍💻 [Leonardo Antonio](https://github.com/leonard0antonio)
   - 👨‍💻 Renato Nascimento
-  - 👨‍💻 Emmanuel Guerra
-  - 👨‍💻 Miguel Vieira
+  - 👨‍💻 [Emmanuel Guerra](https://github.com/Emmanuel1421)
+  - 👨‍💻 [Miguel Vieira](https://github.com/MiguelOlivieira)
   - 👨‍💻 Luan Richard
 
 ## 🚀 Principais Funcionalidades do Projeto
