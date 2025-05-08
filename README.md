@@ -1,9 +1,9 @@
 # TrabalhoPoo
-# 🎵 Projeto: **MusicApp**
+# 🎵 Projeto: **MusicBox**
 
 ## 🧩 Introdução
 
-- **Nome do Projeto:** MusicApp  
+- **Nome do Projeto:** MusicBox  
 - **Contexto:** Desenvolvido como atividade avaliativa (AT) para o curso de Análise e Desenvolvimento de Sistemas (ADS).  
 - **Objetivo Principal:** Criar uma aplicação de música utilizando a linguagem Java, aplicando conceitos de Programação Orientada a Objetos (POO).  
 - **Equipe de Desenvolvimento:**
@@ -46,7 +46,7 @@ Durante o desenvolvimento deste projeto, a equipe:
 
 ## ✅ Conclusão
 
-O projeto **MusicApp** proporcionou uma experiência prática essencial para todos os integrantes do grupo, promovendo não só o aprofundamento técnico em Java e POO, como também o desenvolvimento de habilidades interpessoais e colaborativas.  
+O projeto **MusicBox** proporcionou uma experiência prática essencial para todos os integrantes do grupo, promovendo não só o aprofundamento técnico em Java e POO, como também o desenvolvimento de habilidades interpessoais e colaborativas.  
 Apesar dos desafios, a equipe entregou uma aplicação funcional e útil, consolidando os aprendizados adquiridos ao longo do curso.
 
 
