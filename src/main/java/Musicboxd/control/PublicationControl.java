@@ -97,10 +97,12 @@ public class PublicationControl extends Publication {
 
         Publication selected = allPublications.get(index);
 
+        System.out.println("Comentário antigo: " + selected.getComment());
         System.out.println("\n--------------- Escreva o seu comentário: ---------------");
         String newComment = scn.nextLine();
         selected.setComment(newComment);
 
+        System.out.println("Avaliação antiga: " + selected.getRating());
         System.out.println("\n--------------- Avaliação: ---------------");
         int newRating = scn.nextInt();
         if (newRating <= 0)
