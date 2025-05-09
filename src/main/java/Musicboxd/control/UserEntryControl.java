@@ -92,7 +92,7 @@ public class UserEntryControl extends User {
     public boolean validacao(String email, String senha) {
 
         if (!email.contains(" @ ") || !email.contains(".")) {
-            System.out.println("Email inválido.");
+            System.out.println(" Email inválido.");
             return false;
         }
 
