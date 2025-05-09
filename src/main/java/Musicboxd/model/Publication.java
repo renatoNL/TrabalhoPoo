@@ -11,7 +11,7 @@ import java.util.List;
 //os dois tao dando erro
 @NoArgsConstructor
 @AllArgsConstructor
-public class Publication {
+public class Publication extends Music{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
