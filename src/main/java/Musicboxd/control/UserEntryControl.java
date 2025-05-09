@@ -18,7 +18,7 @@ public class UserEntryControl extends User {
     public void registerUser() {
 
 
-        System.out.println("=== Cadastro de Usuário ===");
+        System.out.println("=== Cadastro de Usuário  ===");
         System.out.print("Nome de usuário: ");
         setName(scn.nextLine());
 
