@@ -16,7 +16,7 @@ public class UserEntryControl extends User {
     List<String> usersEmail = new ArrayList<>();
 
     public void registerUser() {
-        // Verificar se o usuario ja nao está cadastrado
+
 
         System.out.println("=== Cadastro de Usuário ===");
         System.out.print("Nome de usuário: ");
@@ -31,7 +31,7 @@ public class UserEntryControl extends User {
         setPassword(scn.nextLine());
 
 
-        // Verifica se já existe um usuário com o mesmo email
+
         for (User user : usuariosCadastrados) {
             if (user.getEmail().equals(getEmail())) {
                 System.out.println("Usuário com esse email já cadastrado!");
@@ -39,8 +39,12 @@ public class UserEntryControl extends User {
             }
         }
 
-        // Cadastra novo usuário
+
         User novoUsuario = new User();
+        novoUsuario.setEmail(getEmail());
+        novoUsuario.setPassword(getPassword());
+        novoUsuario.setName(getName());
+
         usuariosCadastrados.add(novoUsuario);
         System.out.println("Usuário cadastrado com sucesso!");
     }
@@ -56,11 +60,15 @@ public class UserEntryControl extends User {
         String password = scn.nextLine();
 
         for (User user : usuariosCadastrados) {
-            if (user.getEmail().equalsIgnoreCase(email) && user.getPassword().equals(password)) {
+            if (user.getEmail() != null && user.getPassword() != null &&
+                    user.getEmail().equalsIgnoreCase(email) &&
+                    user.getPassword().equals(password)) {
+
                 System.out.println("Login bem-sucedido! Bem-vindo, " + user.getName());
                 return;
             }
         }
+        System.out.println("Email ou senha incorretos.");
     }
 
     public void recuperacao() {
@@ -82,13 +90,13 @@ public class UserEntryControl extends User {
     }
 
     public boolean validacao(String email, String senha) {
-        // Verifica se o email tem pelo menos um "@" e um "."
+
         if (!email.contains("@") || !email.contains(".")) {
             System.out.println("Email inválido.");
             return false;
         }
 
-        // Verifica se a senha tem pelo menos 6 caracteres
+
         if (senha.length() < 6) {
             System.out.println("A senha deve ter pelo menos 6 caracteres.");
             return false;
