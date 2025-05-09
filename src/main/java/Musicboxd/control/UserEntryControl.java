@@ -22,6 +22,7 @@ public class UserEntryControl extends User {
         System.out.print("Nome de usuário: ");
         setName(scn.nextLine());
 
+
         System.out.print("Email: ");
         setEmail(scn.nextLine());
         usersEmail.add(getEmail());

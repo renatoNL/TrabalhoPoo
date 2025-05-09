@@ -13,11 +13,11 @@ public class PublicationControl extends Publication {
     Scanner scn = new Scanner(System.in);
 
 
-    private List<Publication> allPublications = new ArrayList<>();
+    List<Publication> allPublications = new ArrayList<>();
 
     public void CreatePublication() {
         Publication newPublication = new Publication();
-        List<String> publication = new ArrayList<>();
+        List<String> publicationOutput = new ArrayList<>();
 
         System.out.println("=== Deseja escrever um comentário? ===");
         String answer = scn.nextLine();//caso o usuario responda sim, ele poderá deixar um comentario sobre a musica
@@ -30,20 +30,17 @@ public class PublicationControl extends Publication {
             System.out.println("\n--------------- Escreva o seu comentário: ---------------");
             String comment = scn.nextLine();
             newPublication.setComment(comment);
-            publication.add("Comentário: " + comment + ("\n---------------"));//mostra o comentário na hora da saída dos dados.
+            publicationOutput.add("Comentário: " + comment + ("\n---------------"));//mostra o comentário na hora da saída dos dados.
 
         }
 
         System.out.println("Deixe sua avaliação");
         int rating = scn.nextInt();
 
-        if (rating <= 0)
-            rating = 1;
-        if (rating > 10)
-            rating = 10;
+        rating = Math.max(1,Math.min(10, rating));//verifica se o numero 
 
         newPublication.setRating(rating);
-        publication.add("Avaliação: " + rating + ("\n---------------"));
+        publicationOutput.add("Avaliação: " + rating + ("\n---------------"));
 
         scn.nextLine();//consome a quebra de linha deixada pelo nextInt
 
@@ -60,7 +57,7 @@ public class PublicationControl extends Publication {
 
         System.out.println("Comentário adicionado!");
 
-        for (String publications : publication) {
+        for (String publications : publicationOutput) {
             System.out.println(publications);
         }
 
@@ -106,10 +103,9 @@ public class PublicationControl extends Publication {
         System.out.println("Avaliação antiga: " + selected.getRating());
         System.out.println("\n--------------- Avaliação: ---------------");
         int newRating = scn.nextInt();
-        if (newRating <= 0)
-            newRating = 1;
-        if (newRating > 10)
-            newRating = 10;
+
+        newRating = Math.max(1,Math.min(10, newRating));
+
         selected.setRating(newRating);//atualiza a avalição do usuário
         scn.nextLine();//consumir quebra
 
@@ -125,6 +121,25 @@ public class PublicationControl extends Publication {
     }
 
     public void deletePublication() {
+
+        if (allPublications.isEmpty()){
+            System.out.println("Não há nenhuma publicação para apagar");
+            return;
+        }
+
+        for (int i = 0; i < allPublications.size(); i++){
+            System.out.println("[" + i + "] " + allPublications.get(i).getSongName());
+            System.out.println(allPublications.get(i).getComment());
+        }
+        int j,index;
+
+        System.out.println("Digite qual publicação deseja apagar");
+        index = scn.nextInt();
+
+        Publication selected = allPublications.get(index);
+
+        System.out.println("Publicação selecionada! ");
+
 
     }
 
