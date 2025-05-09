@@ -95,9 +95,10 @@ public class PublicationControl extends Publication {
             return;
         }
 
-        Publication selected = allPublications.get(index);
+        Publication selected = allPublications.get(index);//o selected funciona como uma referencia
+        //ao Publication e altera o objeto da lista original
 
-        System.out.println("Comentário antigo: " + selected.getComment());
+        System.out.println("Comentário antigo: " + selected.getComment());//atualiza o comentário
         System.out.println("\n--------------- Escreva o seu comentário: ---------------");
         String newComment = scn.nextLine();
         selected.setComment(newComment);
@@ -109,12 +110,12 @@ public class PublicationControl extends Publication {
             newRating = 1;
         if (newRating > 10)
             newRating = 10;
-        selected.setRating(newRating);
+        selected.setRating(newRating);//atualiza a avalição do usuário
         scn.nextLine();//consumir quebra
 
         System.out.println("Deseja deixar uma curtida?");
         String newAnswer = scn.nextLine();
-        selected.setLike(newAnswer.equalsIgnoreCase("SIM"));
+        selected.setLike(newAnswer.equalsIgnoreCase("SIM"));//atualiza a curtida
 
         System.out.println("Publicação atualizada!");
     }
