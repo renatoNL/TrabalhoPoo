@@ -26,11 +26,11 @@ public class PlaylistControl extends Music {
         playlist.add("Playlist  " + playlistUser.getPlaylistName());
 
 
-            InsertSongOnPlaylist();
+        InsertSongOnPlaylist();
 
-            playlistUser.setPlaylistID(playlistid + 1);
+        playlistUser.setPlaylistID(playlistid + 1);
 
-            allPlayListsUser.add(new Playlist(playlistUser.getPlaylistID(), playlist, playlistUser.getPlaylistName())); //list para inserir playlists criadas
+        allPlayListsUser.add(new Playlist(playlistUser.getPlaylistID(), playlist, playlistUser.getPlaylistName())); //list para inserir playlists criadas
 
 
 
@@ -48,7 +48,7 @@ public class PlaylistControl extends Music {
             }
         }
 
-        }
+    }
 
 
 
@@ -57,21 +57,21 @@ public class PlaylistControl extends Music {
 
 
 
-        // 1- allPlayListsUser - É uma lista de listas, toda playlist criada será inserida nessa lista "pai"
-        // 2- cada playlist terá seu id unico (pode ser uma variavel local msm)
+    // 1- allPlayListsUser - É uma lista de listas, toda playlist criada será inserida nessa lista "pai"
+    // 2- cada playlist terá seu id unico (pode ser uma variavel local msm)
 
 
 
 
 
-        //   ;Lista com playlists criadas pelo usuario
-        //   cada uma possui id e nome, e claro, seu conteudo (inserido dentro da lista playlist).
-        //        for (Playlist playlists : allPlayListsUser) {  //Printar todas Playlists do Usuario
-        //
-        //            System.out.println(playlists.getUserPlaylist());
-        //
-        //
-        //        }
+    //   ;Lista com playlists criadas pelo usuario
+    //   cada uma possui id e nome, e claro, seu conteudo (inserido dentro da lista playlist).
+    //        for (Playlist playlists : allPlayListsUser) {  //Printar todas Playlists do Usuario
+    //
+    //            System.out.println(playlists.getUserPlaylist());
+    //
+    //
+    //        }
 
 
 
@@ -92,36 +92,36 @@ public class PlaylistControl extends Music {
         numeroPlaylist = scn.nextInt();
 
         for (Playlist playlists : allPlayListsUser)
-            {
+        {
 
 
-                    if (playlists.getPlaylistID() == numeroPlaylist) {
-                        System.out.println("Deseja editar : ");
-                        System.out.println("1 - Nome da Playlist");
-                        System.out.println("3 - Inserir Musica");
-                        System.out.println("2 - Deletar Musica");
+            if (playlists.getPlaylistID() == numeroPlaylist) {
+                System.out.println("Deseja editar : ");
+                System.out.println("1 - Nome da Playlist");
+                System.out.println("3 - Inserir Musica");
+                System.out.println("2 - Deletar Musica");
 
-                        int resp = scn.nextInt();
+                int resp = scn.nextInt();
 
-                        switch (resp) {
-                            case 1:
-                                scn.nextLine();
-                                System.out.println("Informe o novo nome ");
-                                playlists.setPlaylistName(scn.nextLine());
-                                break;
+                switch (resp) {
+                    case 1:
+                        scn.nextLine();
+                        System.out.println("Informe o novo nome ");
+                        playlists.setPlaylistName(scn.nextLine());
+                        break;
 
-                            case 2:
-                                System.out.println(playlists.getUserPlaylist());
-                                InsertSongOnPlaylist();
-
-
-                        }
+                    case 2:
+                        System.out.println(playlists.getUserPlaylist());
+                        InsertSongOnPlaylist();
 
 
-                    }
+                }
+
 
             }
+
         }
+    }
 
 
     public void InsertSongOnPlaylist(){
@@ -152,6 +152,9 @@ public class PlaylistControl extends Music {
 
 
             System.out.println("\nMusica Inserida! ");
+        }
     }
 }
-    }
+
+
+
