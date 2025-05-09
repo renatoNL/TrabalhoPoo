@@ -68,7 +68,7 @@ public class UserEntryControl extends User {
                 return;
             }
         }
-        System.out.println("Email ou senha incorretos.");
+        System.out.println("Email ou  senha incorretos.");
     }
 
     public void recuperacao() {
