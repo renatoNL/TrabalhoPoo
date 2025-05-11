@@ -1,12 +1,13 @@
 package Musicboxd.service;
 
+
 import Musicboxd.model.*;
-
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Service;
 import java.util.Scanner;
+import java.util.HashMap;
+
 
 @Service
 public class PlaylistControl extends Music {
@@ -21,7 +22,8 @@ public class PlaylistControl extends Music {
 
         System.out.print("Informe o nome da sua playlist: ");
         playlistUser.setPlaylistName(scn.nextLine());
-        playlist.add("Playlist  " + playlistUser.getPlaylistName());
+        playlist.add("=== Playlist  " + playlistUser.getPlaylistName() + " ===");
+
 
         InsertSongOnPlaylist();
 
@@ -29,13 +31,15 @@ public class PlaylistControl extends Music {
 
         allPlayListsUser.add(new Playlist(playlistUser.getPlaylistID(), playlist, playlistUser.getPlaylistName())); //list para inserir playlists criadas
 
+
+
         for (String playlists : playlist) {
 
             System.out.println(playlists);
 
 
             if (playlists.contains("Playlist ")) {
-                System.out.println("----------");
+                System.out.print("");
             }
 
             if (playlists.contains("Album ")) {
@@ -93,8 +97,9 @@ public class PlaylistControl extends Music {
             if (playlists.getPlaylistID() == numeroPlaylist) {
                 System.out.println("Deseja editar : ");
                 System.out.println("1 - Nome da Playlist");
-                System.out.println("3 - Inserir Musica");
-                System.out.println("2 - Deletar Musica");
+                System.out.println("2 - Inserir Musica");
+                System.out.println("3 - Deletar Musica");
+                System.out.println("4 - Deletar Playlist");
 
                 int resp = scn.nextInt();
 
@@ -106,31 +111,49 @@ public class PlaylistControl extends Music {
                         break;
 
                     case 2:
-                        System.out.println(playlists.getUserPlaylist());
-                        InsertSongOnPlaylist();
 
+                        InsertSongOnPlaylist();
+                        break;
+
+                    case 3:
+
+                       /* if (allPublications.isEmpty()){
+                            System.out.println("Não há nenhuma publicação para apagar");
+                            return;
+                      } */
+                        deleteSongOnPlaylist(playlists);
+                        break;
+
+                    case 4:
+                        allPlayListsUser.remove(numeroPlaylist - 1);
+                        break;
 
                 }
 
 
-            }
+            } break;
 
         }
     }
 
 
+    HashMap<String, String> musicaId= new HashMap<String, String>(); //hashmap pra inserir musicas e seus ids
+
     public void InsertSongOnPlaylist(){
 
         System.out.print("Quantas músicas deseja inserir em sua Playlist? : ");
         int quantitySongs = scn.nextInt(); //variavel exclusiva para looping de inserções.
+
         scn.nextLine(); //variavel para receber o buffer do int (evitar bug);
         System.out.println("Informe agora os detalhes das músicas que deseja inserir na Playlist");
 
         for (int x = 1; x <= quantitySongs; x++) {
-
+            //sempre q houver a chamada do metodo insertsongonplaylist, a musica recebe seu id
+            setMusicID(getMusicID() + 1);
             System.out.printf("\nNome da %d música = ", x);
             setSongName(scn.nextLine()); //Inserção direta de string para parametro do metodo da class Music
-            playlist.add("Nome da música = " + getSongName());
+            playlist.add(getSongName());
+            musicaId.put(getSongName(), getSongName());
 
             System.out.print("Artista = ");
             setArtist(scn.nextLine());
@@ -143,13 +166,46 @@ public class PlaylistControl extends Music {
 
             System.out.print("Album = ");
             setAlbum(scn.nextLine());
-            playlist.add("Genero = " + getAlbum());
+            playlist.add("Album = " + getAlbum());
 
 
             System.out.println("\nMusica Inserida! ");
         }
     }
-}
 
+    public void deleteSongOnPlaylist(Playlist playlists){
+        System.out.println("Musicas existentes na playlist: \n");
+
+        musicaId.forEach( (IdMusica, NomeMusica) -> { System.out.println( NomeMusica ); } );
+
+        System.out.println("Informe nome da música que deseja deletar: ");
+        scn.nextLine();
+        String songToDelete = scn.nextLine();
+        if(playlists.getUserPlaylist().contains(songToDelete)){
+            for(int i = 0; i < playlists.getUserPlaylist().size(); i++ ) { //cada item da list conta no seu comprimento, logo, 1 musica = 4 itens (nome, artista, genero, album) 2 musicas = 8 itens...
+
+                String musicDeleted = playlists.getUserPlaylist().get(i); //recebe os indices da list.
+
+                if (musicDeleted.equalsIgnoreCase(songToDelete)) { //comparacao do indice atual (musicDeleted) com a musica q o usuario pede pra apagar
+                    if (i + 3 < playlists.getUserPlaylist().size()) {
+                        playlists.getUserPlaylist().subList(i, i + 4).clear(); //cria uma sublist, limpando do indice do nome da musica até o album
+                        System.out.println("Musica removida");
+
+                    }
+
+                    musicaId.remove(songToDelete); //remoção do da musica no hashmap)
+                    break;
+                }
+            }
+        } else{
+            System.out.println("Não existe essa música na playlist");
+        }
+    }
+
+
+
+
+
+}
 
 

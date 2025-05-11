@@ -1,7 +1,11 @@
+
+
+
 package Musicboxd.service;
 
 import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 @Service
@@ -21,9 +25,10 @@ public class MenuHomeControl {
             System.out.println("1 - Entrar");
             System.out.println("2 - Cadastrar");
             System.out.println("3 - Criar Playlist"); //deixa aqui por enqnt, pra facilitar o test
-            System.out.println("4 - Comentar Música");
-            System.out.println("5 - Editar Comentário");//digo o mesmo por aqui
-            System.out.println("6 - Sair\n");
+            System.out.println("4 - editar Playlist");
+            System.out.println("5 - Comentar Música");
+            System.out.println("6 - Editar Comentário");//digo o mesmo por aqui
+            System.out.println("7 - Sair\n");
 
             answer = scn.nextInt();
             //###TODO colocar a validação em alguma das lógicas aqui!
@@ -38,12 +43,15 @@ public class MenuHomeControl {
                     playlist.CreatePlaylist();
                     break;
                 case 4:
-                    publication.CreatePublication();
+                    playlist.EditPlaylist();
                     break;
                 case 5:
-                    publication.editPublication();
+                    publication.CreatePublication();
                     break;
                 case 6:
+                    publication.editPublication();
+                    break;
+                case 7:
                     System.out.println("Encerrando o programa!");
                     System.exit(0);
                     break;
@@ -52,7 +60,7 @@ public class MenuHomeControl {
                     break;
             }
 
-        } while (true);  }
+        } while (answer != 6);  }
 }
 
 //    public String menu() {
@@ -62,4 +70,3 @@ public class MenuHomeControl {
 //        System.out.println("3 - ");
 //        return "";
 //    }
-
