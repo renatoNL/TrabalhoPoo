@@ -1,8 +1,9 @@
-package Musicboxd.control;
+package Musicboxd.service;
 
-import Musicboxd.control.*;
 import Musicboxd.model.*;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserProfileControl extends User {
 
     public void deletePlaylist () {

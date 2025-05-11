@@ -1,6 +1,5 @@
 package Musicboxd;
 
-import Musicboxd.control.MenuHomeControl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MusicboxdApplication {
 
 	public static void main(String[] args) {
-
-
 		SpringApplication.run(MusicboxdApplication.class, args);
 	}
 

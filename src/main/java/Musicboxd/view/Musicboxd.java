@@ -1,7 +1,6 @@
 package Musicboxd.view;
 
-import Musicboxd.control.*;
-import Musicboxd.model.*;
+import Musicboxd.service.MenuHomeControl;
 
 import java.util.Scanner;
 

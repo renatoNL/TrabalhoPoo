@@ -1,12 +1,13 @@
-package Musicboxd.control;
+package Musicboxd.service;
 
 import Musicboxd.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
+@Service
 public class UserEntryControl extends User {
 
 

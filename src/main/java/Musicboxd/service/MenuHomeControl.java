@@ -1,11 +1,10 @@
-package Musicboxd.control;
+package Musicboxd.service;
 
-import Musicboxd.model.Publication;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
+@Service
 public class MenuHomeControl {
 
     Scanner scn = new Scanner(System.in);
@@ -53,7 +52,7 @@ public class MenuHomeControl {
                     break;
             }
 
-        } while (answer != 6);  }
+        } while (true);  }
 }
 
 //    public String menu() {

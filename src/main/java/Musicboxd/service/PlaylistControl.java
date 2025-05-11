@@ -1,13 +1,14 @@
-package Musicboxd.control;
+package Musicboxd.service;
 
 import Musicboxd.model.*;
-import org.springframework.stereotype.Controller;
+
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-@Controller
+@Service
 public class PlaylistControl extends Music {
     Scanner scn = new Scanner(System.in);
 
@@ -18,21 +19,15 @@ public class PlaylistControl extends Music {
     int playlistid = 0;
     public void CreatePlaylist() {
 
-
-
-
         System.out.print("Informe o nome da sua playlist: ");
         playlistUser.setPlaylistName(scn.nextLine());
         playlist.add("Playlist  " + playlistUser.getPlaylistName());
-
 
         InsertSongOnPlaylist();
 
         playlistUser.setPlaylistID(playlistid + 1);
 
         allPlayListsUser.add(new Playlist(playlistUser.getPlaylistID(), playlist, playlistUser.getPlaylistName())); //list para inserir playlists criadas
-
-
 
         for (String playlists : playlist) {
 

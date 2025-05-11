@@ -1,17 +1,15 @@
-package Musicboxd.control;
-
+package Musicboxd.service;
 import Musicboxd.model.Publication;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-@Controller
+@Service
 public class PublicationControl extends Publication {
     //devo adicionar a classe musica aqui?para comentar especificamente na musica
     Scanner scn = new Scanner(System.in);
-
 
     List<Publication> allPublications = new ArrayList<>();
 
@@ -48,7 +46,7 @@ public class PublicationControl extends Publication {
         answer = scn.nextLine();
 
         if (answer.equalsIgnoreCase("SIM")) {//condicional para verificar se o usuario quer deixar uma curtida
-            newPublication.setLike(true);
+            newPublication.setLiked(true);
             System.out.println("Like");
 
         }
@@ -66,8 +64,6 @@ public class PublicationControl extends Publication {
         //        public void EditPublication() {
         //
         //        }
-
-
 
     }
 
@@ -111,7 +107,7 @@ public class PublicationControl extends Publication {
 
         System.out.println("Deseja deixar uma curtida?");
         String newAnswer = scn.nextLine();
-        selected.setLike(newAnswer.equalsIgnoreCase("SIM"));//atualiza a curtida
+        selected.setLiked(newAnswer.equalsIgnoreCase("SIM"));//atualiza a curtida
 
         System.out.println("Publicação atualizada!");
     }
