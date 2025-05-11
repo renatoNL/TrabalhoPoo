@@ -17,13 +17,13 @@ public class PublicationControl extends Publication {
         Publication newPublication = new Publication();
         List<String> publicationOutput = new ArrayList<>();
 
-        System.out.println("=== Deseja escrever um comentário? ===");
+        System.out.println("\n--------------- Digite a música ---------------");
+        String songName = scn.nextLine();
+        newPublication.setSongName(songName);
+
+        System.out.println("\n--------------- Deseja escrever um comentário? ---------------");
         String answer = scn.nextLine();//caso o usuario responda sim, ele poderá deixar um comentario sobre a musica
         if (answer.equalsIgnoreCase("sim")) {
-
-            System.out.println("\n--------------- Digite a música ---------------");
-            String songName = scn.nextLine();
-            newPublication.setSongName(songName);
 
             System.out.println("\n--------------- Escreva o seu comentário: ---------------");
             String comment = scn.nextLine();
@@ -32,17 +32,17 @@ public class PublicationControl extends Publication {
 
         }
 
-        System.out.println("Deixe sua avaliação");
+        System.out.println("\n--------------- Deixe sua avaliação ---------------");
         int rating = scn.nextInt();
 
-        rating = Math.max(1,Math.min(10, rating));//verifica se o numero 
+        rating = Math.max(0,Math.min(10, rating));//verifica se o numero é menor que 0 ou maior que 10 para evitar avaliações inválidas
 
         newPublication.setRating(rating);
         publicationOutput.add("Avaliação: " + rating + ("\n---------------"));
 
         scn.nextLine();//consome a quebra de linha deixada pelo nextInt
 
-        System.out.println("Deseja deixar uma curtida?");
+        System.out.println("\n--------------- Deseja deixar uma curtida? ---------------");
         answer = scn.nextLine();
 
         if (answer.equalsIgnoreCase("SIM")) {//condicional para verificar se o usuario quer deixar uma curtida
@@ -68,6 +68,7 @@ public class PublicationControl extends Publication {
     }
 
     public void editPublication() {
+
         if (allPublications.isEmpty()){//verifica se há comentários
             System.out.println("Não há nenhuma publicação para editar!");
             return;
@@ -77,26 +78,25 @@ public class PublicationControl extends Publication {
         for (int i = 0; i < allPublications.size(); i++){
             System.out.println("[" + i + "] " + allPublications.get(i).getSongName());
             System.out.println(allPublications.get(i).getComment());
-        }//percorre os índices dos comentários pelo e mostra alem do indice o nome da musica e o comentario relacionado
+        }//percorre os índices dos comentários e mostra alem do indice o nome da musica e o comentario relacionado
 
-        System.out.println("Escolha o número da publicação que você deseja editar");
+        System.out.println("\n--------------- Escolha o número da publicação que você deseja editar ---------------");
         int index = scn.nextInt();
         scn.nextLine();
 
         if (index < 0 || index >= allPublications.size()){
             System.out.println("Índice inválido");
             return;
-        }
+        }//verificação do indice digitado
 
-        Publication selected = allPublications.get(index);//o selected funciona como uma referencia
-        //ao Publication e altera o objeto da lista original
+        Publication selected = allPublications.get(index);//variavel selected para armazenar o objeto da list na posicao digitada pelo usuario
 
-        System.out.println("Comentário antigo: " + selected.getComment());//atualiza o comentário
+        System.out.println("\n--> Comentário antigo: " + selected.getComment());//atualiza o comentário
         System.out.println("\n--------------- Escreva o seu comentário: ---------------");
         String newComment = scn.nextLine();
         selected.setComment(newComment);
 
-        System.out.println("Avaliação antiga: " + selected.getRating());
+        System.out.println("\n-->Avaliação antiga: " + selected.getRating());
         System.out.println("\n--------------- Avaliação: ---------------");
         int newRating = scn.nextInt();
 
@@ -105,7 +105,7 @@ public class PublicationControl extends Publication {
         selected.setRating(newRating);//atualiza a avalição do usuário
         scn.nextLine();//consumir quebra
 
-        System.out.println("Deseja deixar uma curtida?");
+        System.out.println("\n--------------- Deseja deixar uma curtida? ---------------");
         String newAnswer = scn.nextLine();
         selected.setLiked(newAnswer.equalsIgnoreCase("SIM"));//atualiza a curtida
 
@@ -127,14 +127,13 @@ public class PublicationControl extends Publication {
             System.out.println("[" + i + "] " + allPublications.get(i).getSongName());
             System.out.println(allPublications.get(i).getComment());
         }
-        int j,index;
+        int indexPublication = 0;
 
         System.out.println("Digite qual publicação deseja apagar");
-        index = scn.nextInt();
+        indexPublication = scn.nextInt();
 
-        Publication selected = allPublications.get(index);
-
-        System.out.println("Publicação selecionada! ");
+        allPublications.remove(indexPublication - 1);
+        System.out.println("Publicação apagada! ");
 
 
     }

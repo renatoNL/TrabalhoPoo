@@ -18,7 +18,7 @@ public class MenuHomeControl {
 
     public void telaInicial() {
         int answer;
-
+        boolean continuar = true;
 
         do {
             System.out.println("\n=== Menu Inicial ===");
@@ -27,8 +27,9 @@ public class MenuHomeControl {
             System.out.println("3 - Criar Playlist"); //deixa aqui por enqnt, pra facilitar o test
             System.out.println("4 - editar Playlist");
             System.out.println("5 - Comentar Música");
-            System.out.println("6 - Editar Comentário");//digo o mesmo por aqui
-            System.out.println("7 - Sair\n");
+            System.out.println("6 - Editar Comentário");
+            System.out.println("7 - Apagar Comentário");
+            System.out.println("8 - Sair\n");
 
             answer = scn.nextInt();
             //###TODO colocar a validação em alguma das lógicas aqui!
@@ -52,15 +53,18 @@ public class MenuHomeControl {
                     publication.editPublication();
                     break;
                 case 7:
+                    publication.deletePublication();
+                    break;
+                case 8:
                     System.out.println("Encerrando o programa!");
-                    System.exit(0);
+                    continuar = false;
                     break;
                 default:
                     System.out.println("Opção inválida!");
                     break;
             }
 
-        } while (answer != 6);  }
+        } while (continuar);  }
 }
 
 //    public String menu() {
