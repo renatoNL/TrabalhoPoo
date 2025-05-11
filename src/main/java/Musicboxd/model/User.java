@@ -1,18 +1,22 @@
 package Musicboxd.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
+
+@Entity
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id

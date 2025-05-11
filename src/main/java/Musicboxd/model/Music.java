@@ -8,10 +8,11 @@ import lombok.Setter;
 
 @Entity
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+
+@NoArgsConstructor
+@AllArgsConstructor
 public class Music {
 
     @Id
