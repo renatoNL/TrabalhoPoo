@@ -4,6 +4,8 @@
 package Musicboxd.service;
 
 import org.springframework.stereotype.Service;
+
+import javax.naming.Name;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,10 +17,11 @@ public class MenuHomeControl {
     PlaylistControl playlist = new PlaylistControl();
     PublicationControl publication = new PublicationControl();
     UserEntryControl userEntry = new UserEntryControl();
+    UserProfileControl userProfile = new UserProfileControl();
 
     public void telaInicial() {
         int answer;
-        boolean continuar = true;
+        boolean continueMenu = true;
 
         do {
             System.out.println("\n=== Menu Inicial ===");
@@ -44,7 +47,7 @@ public class MenuHomeControl {
                     playlist.CreatePlaylist();
                     break;
                 case 4:
-                    playlist.EditPlaylist();
+                    PlaylistControl.EditPlaylist();
                     break;
                 case 5:
                     publication.CreatePublication();
@@ -57,14 +60,17 @@ public class MenuHomeControl {
                     break;
                 case 8:
                     System.out.println("Encerrando o programa!");
-                    continuar = false;
+                    continueMenu = false;
+                    break;
+                case 9:
+                    userProfile.userDetails(userEntry);
                     break;
                 default:
                     System.out.println("Opção inválida!");
                     break;
             }
 
-        } while (continuar);  }
+        } while (continueMenu);  }
 }
 
 //    public String menu() {

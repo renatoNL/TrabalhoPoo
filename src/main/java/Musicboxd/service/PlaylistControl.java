@@ -11,11 +11,11 @@ import java.util.HashMap;
 
 @Service
 public class PlaylistControl extends Music {
-    Scanner scn = new Scanner(System.in);
+    static Scanner scn = new Scanner(System.in);
 
     Playlist playlistUser = new Playlist();
-    List<Playlist> allPlayListsUser = new ArrayList<>();
-    List<String> playlist = new ArrayList<>();
+    static List<Playlist> allPlayListsUser = new ArrayList<>();
+    static List<String> playlist = new ArrayList<>();
 
     int playlistid = 0;
     public void CreatePlaylist() {
@@ -27,7 +27,7 @@ public class PlaylistControl extends Music {
 
         InsertSongOnPlaylist();
 
-        playlistUser.setPlaylistID(playlistid + 1);
+        playlistUser.setPlaylistID(playlistid + 1); //incremento do id semrpe q for criado uma nova playlist
 
         allPlayListsUser.add(new Playlist(playlistUser.getPlaylistID(), playlist, playlistUser.getPlaylistName())); //list para inserir playlists criadas
 
@@ -73,11 +73,17 @@ public class PlaylistControl extends Music {
     //        }
 
 
+public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das playlists
+       for (Playlist playlist : allPlayListsUser)  //esse for permite q a variavel playlist, por receber playlists do usuario, utilizar o metodo getName em cada playlist.
+           System.out.println(playlist.getPlaylistName());
+       }
 
 
 
 
-    public void EditPlaylist() {
+    public static void EditPlaylist() {
+
+        PlaylistControl pc = new PlaylistControl(); //instnacia da classe pq esse methodo é static, e quero usar um metodo q não seja static
         System.out.println("Qual playlist deseja editar? ");
         int numeroPlaylist = 0;
         for (Playlist playlists : allPlayListsUser) {  //Printar todas Playlists do Usuario
@@ -112,7 +118,7 @@ public class PlaylistControl extends Music {
 
                     case 2:
 
-                        InsertSongOnPlaylist();
+                        pc.InsertSongOnPlaylist();
                         break;
 
                     case 3:
@@ -138,7 +144,7 @@ public class PlaylistControl extends Music {
     }
 
 
-    HashMap<String, String> musicaId= new HashMap<String, String>(); //hashmap pra inserir musicas e seus ids
+    static HashMap<String, String> musicaId= new HashMap<String, String>(); //hashmap pra inserir musicas e seus ids
 
     public void InsertSongOnPlaylist(){
 
@@ -179,7 +185,7 @@ public class PlaylistControl extends Music {
         }
     }
 
-    public void deleteSongOnPlaylist(Playlist playlists){
+    public static void deleteSongOnPlaylist(Playlist playlists){
         System.out.println("Musicas existentes na playlist: \n");
         if (musicaId.isEmpty()){
             System.out.println("Não há músicas existentes");
