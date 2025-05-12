@@ -1,23 +1,29 @@
+
 package Musicboxd.service;
 import Musicboxd.model.Publication;
 import Musicboxd.model.Music;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 @Service
 public class PublicationControl extends Music {
-    //devo adicionar a classe musica aqui?para comentar especificamente na musica
+
     Scanner scn = new Scanner(System.in);
 
-
-    List<Publication> allPublications = new ArrayList<>();
-    List<String> MusicNames = new ArrayList<>();
+    int indexPublication = 0;
+    List<Publication> allPublications = new ArrayList<>();    List<String> MusicNames = new ArrayList<>();
+    List<Integer> PublicationId = new ArrayList<Integer>();
     public void CreatePublication() {
+
         Publication newPublication = new Publication();
         List<String> publicationOutput = new ArrayList<>();
+
+        //newPublication.setPublicationId(indexPublication);
+
+//        int id = 0;
+//        int PublicationId = id + 1;
+//        PublicationId.add(PublicationId);
 
         System.out.println("\n--------------- Digite a música ---------------");
         String songName = scn.nextLine();
@@ -121,29 +127,32 @@ public class PublicationControl extends Music {
 
     public void deletePublication() {
 
-        if (allPublications.isEmpty()){
+        if (allPublications.isEmpty()) {
             System.out.println("Não há nenhuma publicação para apagar");
             return;
         }
 
-        for (int i = 0; i < allPublications.size(); i++){
+        for (int i = 0; i < allPublications.size(); i++) {
             System.out.println("[" + i + "] " + MusicNames.get(i));
             System.out.println(allPublications.get(i).getComment());
         }
-        int indexPublication = 0;
+
 
         System.out.println("Digite qual publicação deseja apagar");
         indexPublication = scn.nextInt();
 
-        allPublications.remove(indexPublication - 1);
-        System.out.println("Publicação apagada! ");
+        System.out.printf("%d", indexPublication);
+        allPublications.remove(indexPublication);
+        MusicNames.remove(indexPublication);
+
+          System.out.println("Publicação apagada! ");
 
 
     }
 
     public void FeatureInProfile() {
 
-    }
+    }//
 
 
 

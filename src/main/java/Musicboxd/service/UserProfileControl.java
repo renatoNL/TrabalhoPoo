@@ -2,6 +2,7 @@ package Musicboxd.service;
 
 import Musicboxd.model.*;
 
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,9 +16,9 @@ public class UserProfileControl {
   PlaylistControl pc = new PlaylistControl();
 
 
-    public void userDetails(UserEntryControl userEntry){ //Classe userEntryControl foi passada como argumento, pois é necessário acessar os gets de lá
-                                                        //Era possivel criar um construtor e usar uma notação de injeção do Spring tbm, mas aproveitei a instancia dessa
-                                                        //classe lá no menuHomeControl.
+    public void userDetails(UserEntryControl userEntry){    //Classe userEntryControl foi passada como argumento, pois é necessário acessar os gets de lá
+                                                            //Era possivel criar um construtor e usar uma notação de injeção do Spring tbm, mas aproveitei a instancia dessa
+                                                            //classe lá no menuHomeControl.
 
         System.out.println("Nome do usuário = " + userEntry.getNewUser().getName());
         System.out.println("Bio = " + userEntry.getNewUser().getBio());
@@ -27,16 +28,16 @@ public class UserProfileControl {
     }
 
 
-    public void EditPlaylist () {  //ja fiz isso, ja q esse metodo ja tava aqui, so chamei oq eu ja fiz
+    public void editPlaylist () {  //ja fiz isso, ja q esse metodo ja tava aqui, so chamei oq eu ja fiz
             PlaylistControl.EditPlaylist();
     }
 
-    public void dislikePlaylist () { //n sei qm colocou isso
-
+    public void editPublication () {
+        PublicationControl.EditPublication();
     }
 
-    public void deletePublication () { //tbm n sei qm colocou, mas emmanuel ja fez algo assim lá no control publication
-
+    public void deletePublication () {
+        PublicationControl.DeletePublication();
     }
 
 }

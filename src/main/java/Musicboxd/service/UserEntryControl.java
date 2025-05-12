@@ -10,9 +10,9 @@ import java.util.Scanner;
 @Service
 public class UserEntryControl {
 
-    User novoUsuario = new User();
+    User newUser = new User();
     Scanner scn = new Scanner(System.in);
-    List<User> usuariosCadastrados = new ArrayList<>();
+    List<User> registeredUsers = new ArrayList<>();
 
     List<String> usersEmail = new ArrayList<>();
 
@@ -21,20 +21,20 @@ public class UserEntryControl {
 
         System.out.println("===   Cadastro de Usuário  ===");
         System.out.print("Nome de usuário: ");
-        novoUsuario.setName(scn.nextLine());
+        newUser.setName(scn.nextLine());
 
 
         System.out.print("Email: ");
-        novoUsuario.setEmail(scn.nextLine());
-        usersEmail.add(novoUsuario.getEmail());
+        newUser.setEmail(scn.nextLine());
+        usersEmail.add(newUser.getEmail());
 
         System.out.print("Senha: ");
-        novoUsuario.setPassword(scn.nextLine());
+        newUser.setPassword(scn.nextLine());
 
 
 
-        for (User user : usuariosCadastrados) {
-            if (user.getEmail().equals(novoUsuario.getEmail())) {
+        for (User user : registeredUsers) {
+            if (user.getEmail().equals(newUser.getEmail())) {
                 System.out.println("Usuário com esse email já cadastrado!");
                 return;
             }
@@ -43,7 +43,7 @@ public class UserEntryControl {
 
 
 
-        usuariosCadastrados.add(novoUsuario);
+        registeredUsers.add(newUser);
         System.out.println("Usuário cadastrado com sucesso!");
     }
 
@@ -57,7 +57,7 @@ public class UserEntryControl {
         System.out.print("Senha: ");
         String password = scn.nextLine();
 
-        for (User user : usuariosCadastrados) {
+        for (User user : registeredUsers) {
             if (user.getEmail() != null && user.getPassword() != null &&
                     user.getEmail().equalsIgnoreCase(email) &&
                     user.getPassword().equals(password)) {
@@ -70,7 +70,7 @@ public class UserEntryControl {
     }
 
     public User getNewUser(){
-        return novoUsuario;
+        return newUser;
     }
     public void recovery() {
 
@@ -78,7 +78,7 @@ public class UserEntryControl {
         System.out.print("Digite seu email: ");
         String emailDigitado = scn.nextLine();
 
-        for (User user : usuariosCadastrados) {
+        for (User user : registeredUsers) {
             if (user.getEmail().equals(emailDigitado)) {
                 System.out.print("Digite a nova senha: ");
                 String novaSenha = scn.nextLine();
