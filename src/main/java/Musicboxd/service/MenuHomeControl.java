@@ -5,9 +5,9 @@ package Musicboxd.service;
 
 import org.springframework.stereotype.Service;
 
-import javax.naming.Name;
-import java.util.ArrayList;
-import java.util.List;
+import javax.naming.Name; //?
+import java.util.ArrayList; //Qual uso?
+import java.util.List; //
 import java.util.Scanner;
 
 @Service
@@ -44,10 +44,10 @@ public class MenuHomeControl {
                     userEntry.registerUser();
                     break;
                 case 3:
-                    playlist.CreatePlaylist();
+                    playlist.createPlaylist();
                     break;
                 case 4:
-                    PlaylistControl.EditPlaylist();
+                    playlist.EditPlaylist();
                     break;
                 case 5:
                     publication.CreatePublication();

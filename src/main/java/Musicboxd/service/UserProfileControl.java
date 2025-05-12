@@ -14,6 +14,7 @@ public class UserProfileControl {
 
 
   PlaylistControl pc = new PlaylistControl();
+  PublicationControl publi = new PublicationControl();
 
 
     public void userDetails(UserEntryControl userEntry){    //Classe userEntryControl foi passada como argumento, pois é necessário acessar os gets de lá
@@ -29,15 +30,15 @@ public class UserProfileControl {
 
 
     public void editPlaylist () {  //ja fiz isso, ja q esse metodo ja tava aqui, so chamei oq eu ja fiz
-            PlaylistControl.EditPlaylist();
+        pc.EditPlaylist();
     }
 
     public void editPublication () {
-        PublicationControl.EditPublication();
+        publi.editPublication();
     }
 
     public void deletePublication () {
-        PublicationControl.DeletePublication();
+        publi.editPublication();
     }
 
 }
