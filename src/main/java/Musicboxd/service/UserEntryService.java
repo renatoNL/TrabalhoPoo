@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 @Service
-public class UserEntryControl {
+public class UserEntryService {
 
     User newUser = new User();
     Scanner scn = new Scanner(System.in);

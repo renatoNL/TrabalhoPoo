@@ -4,13 +4,16 @@ package Musicboxd.service;
 import Musicboxd.model.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import interfaces.PlaylistServiceImple;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
 import java.util.HashMap;
 
 
+
 @Service
-public class PlaylistControl extends Music {
+public class PlaylistService extends Music implements PlaylistServiceImple {
     static Scanner scn = new Scanner(System.in);
 
     Playlist playlistUser = new Playlist();
@@ -18,14 +21,16 @@ public class PlaylistControl extends Music {
     static List<String> playlist = new ArrayList<>();
 
     int playlistid = 0;
-    public void CreatePlaylist() {
+
+    @Override
+    public void createPlaylist() {
 
         System.out.print("Informe o nome da sua playlist: ");
         playlistUser.setPlaylistName(scn.nextLine());
         playlist.add("=== Playlist  " + playlistUser.getPlaylistName() + " ===");
 
 
-        InsertSongOnPlaylist();
+        insertSongOnPlaylist();
 
         playlistUser.setPlaylistID(playlistid + 1); //incremento do id semrpe q for criado uma nova playlist
 
@@ -71,8 +76,7 @@ public class PlaylistControl extends Music {
     //
     //
     //        }
-
-
+    @Override
 public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das playlists
        for (Playlist playlist : allPlayListsUser)  //esse for permite q a variavel playlist, por receber playlists do usuario, utilizar o metodo getName em cada playlist.
            System.out.println(playlist.getPlaylistName());
@@ -81,9 +85,9 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
 
 
 
-    public static void EditPlaylist() {
+    public void EditPlaylist() {
 
-        PlaylistControl pc = new PlaylistControl(); //instnacia da classe pq esse methodo é static, e quero usar um metodo q não seja static
+        PlaylistService pc = new PlaylistService(); //instnacia da classe pq esse methodo é static, e quero usar um metodo q não seja static
         System.out.println("Qual playlist deseja editar? ");
         int numeroPlaylist = 0;
         for (Playlist playlists : allPlayListsUser) {  //Printar todas Playlists do Usuario
@@ -96,57 +100,61 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
         System.out.println("Informe o numero : ");
         numeroPlaylist = scn.nextInt();
 
-        for (Playlist playlists : allPlayListsUser)
-        {
+        playlistid = 1;
 
 
-            if (playlists.getPlaylistID() == numeroPlaylist) {
-                System.out.println("Deseja editar : ");
-                System.out.println("1 - Nome da Playlist");
-                System.out.println("2 - Inserir Musica");
-                System.out.println("3 - Deletar Musica");
-                System.out.println("4 - Deletar Playlist");
+                if (numeroPlaylist >= 1 && numeroPlaylist <= allPlayListsUser.size()) {
+                    Playlist playlistSelecionada = allPlayListsUser.get(numeroPlaylist - 1);
 
-                int resp = scn.nextInt();
+                    System.out.println("Deseja editar : ");
+                    System.out.println("1 - Nome da Playlist");
+                    System.out.println("2 - Inserir Musica");
+                    System.out.println("3 - Deletar Musica");
+                    System.out.println("4 - Deletar Playlist");
 
-                switch (resp) {
-                    case 1:
-                        scn.nextLine();
-                        System.out.println("Informe o novo nome ");
-                        playlists.setPlaylistName(scn.nextLine());
-                        break;
+                    int resp = scn.nextInt();
 
-                    case 2:
+                    switch (resp) {
+                        case 1:
+                            scn.nextLine();
+                            System.out.println("Informe o novo nome ");
+                            playlistSelecionada.setPlaylistName(scn.nextLine());
+                            break;
 
-                        pc.InsertSongOnPlaylist();
-                        break;
+                        case 2:
 
-                    case 3:
+                            insertSongOnPlaylist();
+                            break;
 
-                        if (playlists.getUserPlaylist().isEmpty()){
-                            System.out.println("Não há nenhuma musica na playlist para apagar");
-                            return;
-                      } else {
-                            deleteSongOnPlaylist(playlists);
-                        }
-                        break;
+                        case 3:
 
-                    case 4:
-                        allPlayListsUser.remove(numeroPlaylist - 1);
-                        break;
+                            if (playlistSelecionada.getUserPlaylist().isEmpty()) {
+                                System.out.println("Não há nenhuma musica na playlist para apagar");
+                                return;
+                            } else {
+                                deleteSongOnPlaylist(playlistSelecionada);
+                            }
+                            break;
+
+                        case 4:
+                            allPlayListsUser.remove(numeroPlaylist - 1);
+                            break;
+
+                    }
+
 
                 }
+            }
 
 
-            } break;
 
-        }
-    }
 
 
     static HashMap<String, String> musicaId= new HashMap<String, String>(); //hashmap pra inserir musicas e seus ids
 
-    public void InsertSongOnPlaylist(){
+
+    @Override
+    public void insertSongOnPlaylist(){
 
         System.out.print("Quantas músicas deseja inserir em sua Playlist? : ");
         int quantitySongs = scn.nextInt(); //variavel exclusiva para looping de inserções.

@@ -5,19 +5,16 @@ package Musicboxd.service;
 
 import org.springframework.stereotype.Service;
 
-import javax.naming.Name;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 @Service
-public class MenuHomeControl {
+public class MenuHomeService {
 
     Scanner scn = new Scanner(System.in);
-    PlaylistControl playlist = new PlaylistControl();
-    PublicationControl publication = new PublicationControl();
-    UserEntryControl userEntry = new UserEntryControl();
-    UserProfileControl userProfile = new UserProfileControl();
+    PlaylistService playlist = new PlaylistService();
+    PublicationService publication = new PublicationService();
+    UserEntryService userEntry = new UserEntryService();
+    UserProfileService userProfile = new UserProfileService();
 
     public void telaInicial() {
         int answer;
@@ -44,10 +41,10 @@ public class MenuHomeControl {
                     userEntry.registerUser();
                     break;
                 case 3:
-                    playlist.CreatePlaylist();
+                    playlist.createPlaylist();
                     break;
                 case 4:
-                    PlaylistControl.EditPlaylist();
+                    playlist.EditPlaylist();
                     break;
                 case 5:
                     publication.CreatePublication();
