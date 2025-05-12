@@ -32,15 +32,12 @@ public class UserEntryService {
         newUser.setPassword(scn.nextLine());
 
 
-
         for (User user : registeredUsers) {
             if (user.getEmail().equals(newUser.getEmail())) {
                 System.out.println("Usuário com esse email já cadastrado!");
                 return;
             }
         }
-
-
 
 
         registeredUsers.add(newUser);
@@ -53,6 +50,7 @@ public class UserEntryService {
         System.out.println("==== Login ====");
         System.out.print("Email: ");
         String email = scn.nextLine();
+
 
         System.out.print("Senha: ");
         String password = scn.nextLine();

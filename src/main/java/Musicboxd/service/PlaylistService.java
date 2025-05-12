@@ -5,7 +5,7 @@ import Musicboxd.model.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import interfaces.PlaylistServiceImple;
+import Musicboxd.interfaces.PlaylistServiceImple;
 import org.springframework.stereotype.Service;
 import java.util.Scanner;
 import java.util.HashMap;

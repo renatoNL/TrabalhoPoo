@@ -29,7 +29,9 @@ public class MenuHomeService {
             System.out.println("5 - Comentar Música");
             System.out.println("6 - Editar Comentário");
             System.out.println("7 - Apagar Comentário");
-            System.out.println("8 - Sair\n");
+            System.out.println("8 - Ver Perfil");
+            System.out.println("9 - Recuperar Senha");
+            System.out.println("10 - Sair\n");
 
             answer = scn.nextInt();
             //###TODO colocar a validação em alguma das lógicas aqui!
@@ -56,12 +58,14 @@ public class MenuHomeService {
                     publication.deletePublication();
                     break;
                 case 8:
-                    System.out.println("Encerrando o programa!");
-                    continueMenu = false;
-                    break;
-                case 9:
                     userProfile.userDetails(userEntry);
                     break;
+                case 9:
+                    userEntry.recovery();
+                    break;
+                case 10:
+                    System.out.println("Encerrando o programa!");
+                    continueMenu = false;
                 default:
                     System.out.println("Opção inválida!");
                     break;

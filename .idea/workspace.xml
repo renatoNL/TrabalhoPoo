@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="EditPublication">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/interfaces/PlaylistServiceImple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PublicationControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PublicationControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserProfileControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserProfileControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/view/Musicboxd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" afterDir="false" />
+    </list>
+    <list id="89454143-8787-411f-976d-8bf421f71a7f" name="Changes by miguel" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -51,12 +51,22 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/renatoNL/TrabalhoPoo.git",
-    "accountId": "ca49ebfa-ddb0-44e7-ac78-8eb6351964f1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/renatoNL/TrabalhoPoo.git&quot;,
+    &quot;accountId&quot;: &quot;fb77715e-7200-4f98-bae5-69325fed70e8&quot;
   }
-}]]></component>
+}</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java">
+      <ranges>
+        <range start1="34" end1="35" start2="34" end2="34" changelist="af0c6ecf-c260-4112-85e5-176e96311cc4" />
+        <range start1="43" end1="45" start2="42" end2="42" changelist="af0c6ecf-c260-4112-85e5-176e96311cc4" />
+        <range start1="54" end1="54" start2="51" end2="52" changelist="89454143-8787-411f-976d-8bf421f71a7f" />
+        <range start1="55" end1="55" start2="53" end2="54" changelist="af0c6ecf-c260-4112-85e5-176e96311cc4" />
+      </ranges>
+    </file>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -76,23 +86,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Musicboxd.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Musicboxd.executor": "Run",
+    "JUnit.All in demo.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.MusicboxdApplication.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Renato\Documents\Code\estudos\Cadeiras Segundo Periodo\poo\Trabalhos\RepositorioPOO\TrabalhoPoo\src" />
@@ -100,6 +117,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MusicboxdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="demo" />
@@ -108,6 +133,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in demo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,6 +158,8 @@
       <workItem from="1745972833317" duration="6929000" />
       <workItem from="1746750900886" duration="347000" />
       <workItem from="1746751289033" duration="3135000" />
+      <workItem from="1746989322013" duration="2355000" />
+      <workItem from="1746997826364" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="EditPublication">
       <option name="closed" value="true" />
