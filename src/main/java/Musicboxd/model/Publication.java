@@ -12,7 +12,13 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class Publication extends Music {
+public class Publication{
+
+
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int PublicationId;
 
     @ElementCollection
     private List<String> publication;

@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Scanner;
 
 @Service
-public class UserEntryControl extends User {
+public class UserEntryControl {
 
-
+    User novoUsuario = new User();
     Scanner scn = new Scanner(System.in);
     List<User> usuariosCadastrados = new ArrayList<>();
 
@@ -21,30 +21,27 @@ public class UserEntryControl extends User {
 
         System.out.println("===   Cadastro de Usuário  ===");
         System.out.print("Nome de usuário: ");
-        setName(scn.nextLine());
+        novoUsuario.setName(scn.nextLine());
 
 
         System.out.print("Email: ");
-        setEmail(scn.nextLine());
-        usersEmail.add(getEmail());
+        novoUsuario.setEmail(scn.nextLine());
+        usersEmail.add(novoUsuario.getEmail());
 
         System.out.print("Senha: ");
-        setPassword(scn.nextLine());
+        novoUsuario.setPassword(scn.nextLine());
 
 
 
         for (User user : usuariosCadastrados) {
-            if (user.getEmail().equals(getEmail())) {
+            if (user.getEmail().equals(novoUsuario.getEmail())) {
                 System.out.println("Usuário com esse email já cadastrado!");
                 return;
             }
         }
 
 
-        User novoUsuario = new User();
-        novoUsuario.setEmail(getEmail());
-        novoUsuario.setPassword(getPassword());
-        novoUsuario.setName(getName());
+
 
         usuariosCadastrados.add(novoUsuario);
         System.out.println("Usuário cadastrado com sucesso!");
@@ -72,7 +69,10 @@ public class UserEntryControl extends User {
         System.out.println("Email ou  senha incorretos.");
     }
 
-    public void recuperacao() {
+    public User getNewUser(){
+        return novoUsuario;
+    }
+    public void recovery() {
 
         System.out.println("=== Recuperação de Senha ===");
         System.out.print("Digite seu email: ");
@@ -90,7 +90,7 @@ public class UserEntryControl extends User {
         System.out.println("Email não encontrado.");
     }
 
-    public boolean validacao(String email, String senha) {
+    public boolean validation(String email, String senha) {
 
         if (!email.contains(" @ ") || !email.contains(".")) {
             System.out.println(" Email inválido.");

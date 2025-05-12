@@ -1,5 +1,6 @@
 package Musicboxd.service;
 import Musicboxd.model.Publication;
+import Musicboxd.model.Music;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -7,19 +8,21 @@ import java.util.List;
 import java.util.Scanner;
 
 @Service
-public class PublicationControl extends Publication {
+public class PublicationControl extends Music {
     //devo adicionar a classe musica aqui?para comentar especificamente na musica
     Scanner scn = new Scanner(System.in);
 
-    List<Publication> allPublications = new ArrayList<>();
 
+    List<Publication> allPublications = new ArrayList<>();
+    List<String> MusicNames = new ArrayList<>();
     public void CreatePublication() {
         Publication newPublication = new Publication();
         List<String> publicationOutput = new ArrayList<>();
 
         System.out.println("\n--------------- Digite a música ---------------");
         String songName = scn.nextLine();
-        newPublication.setSongName(songName);
+
+        MusicNames.add(songName);
 
         System.out.println("\n--------------- Deseja escrever um comentário? ---------------");
         String answer = scn.nextLine();//caso o usuario responda sim, ele poderá deixar um comentario sobre a musica
@@ -76,7 +79,7 @@ public class PublicationControl extends Publication {
 
         System.out.println("======= Publicações =======");
         for (int i = 0; i < allPublications.size(); i++){
-            System.out.println("[" + i + "] " + allPublications.get(i).getSongName());
+            System.out.println("[" + i + "] " + MusicNames.get(i));
             System.out.println(allPublications.get(i).getComment());
         }//percorre os índices dos comentários e mostra alem do indice o nome da musica e o comentario relacionado
 
@@ -124,7 +127,7 @@ public class PublicationControl extends Publication {
         }
 
         for (int i = 0; i < allPublications.size(); i++){
-            System.out.println("[" + i + "] " + allPublications.get(i).getSongName());
+            System.out.println("[" + i + "] " + MusicNames.get(i));
             System.out.println(allPublications.get(i).getComment());
         }
         int indexPublication = 0;
