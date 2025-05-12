@@ -1,23 +1,19 @@
 package Musicboxd.service;
 
-import Musicboxd.model.*;
-
 
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
-public class UserProfileControl {
+public class UserProfileService {
 
 //ve se coloca algo a mais ai pro perfil, como destacar musica ou coisas gays a mais, ve como fica melhor.
 
 
-  PlaylistControl pc = new PlaylistControl();
-  PublicationControl publi = new PublicationControl();
+  PlaylistService pc = new PlaylistService();
+  PublicationService publi = new PublicationService();
 
 
-    public void userDetails(UserEntryControl userEntry){    //Classe userEntryControl foi passada como argumento, pois é necessário acessar os gets de lá
+    public void userDetails(UserEntryService userEntry){    //Classe userEntryControl foi passada como argumento, pois é necessário acessar os gets de lá
                                                             //Era possivel criar um construtor e usar uma notação de injeção do Spring tbm, mas aproveitei a instancia dessa
                                                             //classe lá no menuHomeControl.
 

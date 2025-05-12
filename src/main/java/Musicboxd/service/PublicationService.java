@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
-public class PublicationControl extends Music {
+public class PublicationService extends Music {
 
     Scanner scn = new Scanner(System.in);
 

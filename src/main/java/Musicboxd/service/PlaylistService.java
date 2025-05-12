@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 
 @Service
-public class PlaylistControl extends Music implements PlaylistServiceImple {
+public class PlaylistService extends Music implements PlaylistServiceImple {
     static Scanner scn = new Scanner(System.in);
 
     Playlist playlistUser = new Playlist();
@@ -87,7 +87,7 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
 
     public void EditPlaylist() {
 
-        PlaylistControl pc = new PlaylistControl(); //instnacia da classe pq esse methodo é static, e quero usar um metodo q não seja static
+        PlaylistService pc = new PlaylistService(); //instnacia da classe pq esse methodo é static, e quero usar um metodo q não seja static
         System.out.println("Qual playlist deseja editar? ");
         int numeroPlaylist = 0;
         for (Playlist playlists : allPlayListsUser) {  //Printar todas Playlists do Usuario

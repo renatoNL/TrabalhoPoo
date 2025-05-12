@@ -1,14 +1,12 @@
 package Musicboxd.view;
 
-import Musicboxd.service.MenuHomeControl;
-
-import java.util.Scanner;
+import Musicboxd.service.MenuHomeService;
 
 public class Musicboxd {
     public static void main(String[] args) {
 
 //        Scanner scanner = new Scanner(System.in);
-        MenuHomeControl menuHome = new MenuHomeControl();
+        MenuHomeService menuHome = new MenuHomeService();
 
         System.out.println("Seja Bem-Vindo ao Musicboxsd!");
 
