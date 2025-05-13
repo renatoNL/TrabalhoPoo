@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="EditPublication">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/interfaces/PlaylistServiceImple.java" afterDir="false" />
+    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="resolvi o erro de peidoel, e estou a terminar o UserEntryService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" afterDir="false" />
-    </list>
-    <list id="89454143-8787-411f-976d-8bf421f71a7f" name="Changes by miguel" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,22 +46,12 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/renatoNL/TrabalhoPoo.git&quot;,
-    &quot;accountId&quot;: &quot;fb77715e-7200-4f98-bae5-69325fed70e8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/renatoNL/TrabalhoPoo",
+    "accountId": "12b2a22e-466d-4aac-bc5a-e923a429b155"
   }
-}</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java">
-      <ranges>
-        <range start1="34" end1="35" start2="34" end2="34" changelist="af0c6ecf-c260-4112-85e5-176e96311cc4" />
-        <range start1="43" end1="45" start2="42" end2="42" changelist="af0c6ecf-c260-4112-85e5-176e96311cc4" />
-        <range start1="54" end1="54" start2="51" end2="52" changelist="89454143-8787-411f-976d-8bf421f71a7f" />
-        <range start1="55" end1="55" start2="53" end2="54" changelist="af0c6ecf-c260-4112-85e5-176e96311cc4" />
-      </ranges>
-    </file>
-  </component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -89,6 +74,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Musicboxd.executor": "Run",
+    "Application.MusicboxdApplication.executor": "Run",
     "JUnit.All in demo.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
@@ -177,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746754328631</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="resolvi o erro de peidoel, e estou a terminar o UserEntryService">
+      <option name="closed" value="true" />
+      <created>1747089186098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747089186098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +179,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="EditPublication" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditPublication" />
+    <MESSAGE value="resolvi o erro de peidoel, e estou a terminar o UserEntryService" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolvi o erro de peidoel, e estou a terminar o UserEntryService" />
   </component>
 </project>

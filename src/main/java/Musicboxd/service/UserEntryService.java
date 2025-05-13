@@ -18,32 +18,39 @@ public class UserEntryService {
 
     public void registerUser() {
 
+        User newUser = new User(); // nova instância
 
         System.out.println("===   Cadastro de Usuário  ===");
         System.out.print("Nome de usuário: ");
         newUser.setName(scn.nextLine());
 
-
         System.out.print("Email: ");
-        newUser.setEmail(scn.nextLine());
-        usersEmail.add(newUser.getEmail());
+        String email = scn.nextLine();
 
         System.out.print("Senha: ");
-        newUser.setPassword(scn.nextLine());
+        String senha = scn.nextLine();
 
+        // Validação
+        if (!validation(email, senha)) {
+            System.out.println("Cadastro falhou. Dados inválidos.");
+            return;
+        }
 
+        // Verifica se email já existe
         for (User user : registeredUsers) {
-            if (user.getEmail().equals(newUser.getEmail())) {
+            if (user.getEmail().equals(email)) {
                 System.out.println("Usuário com esse email já cadastrado!");
                 return;
             }
         }
 
-
+        newUser.setEmail(email);
+        newUser.setPassword(senha);
+        usersEmail.add(email);
         registeredUsers.add(newUser);
+
         System.out.println("Usuário cadastrado com sucesso!");
     }
-
 
     public void login() {
 
@@ -60,6 +67,7 @@ public class UserEntryService {
                     user.getEmail().equalsIgnoreCase(email) &&
                     user.getPassword().equals(password)) {
 
+                this.newUser = user;
                 System.out.println("Login bem-sucedido! Bem-vindo, " + user.getName());
                 return;
             }
@@ -88,10 +96,14 @@ public class UserEntryService {
         System.out.println("Email não encontrado.");
     }
 
+    public void logout() {
+        this.newUser = new User();
+    }
+
     public boolean validation(String email, String senha) {
 
-        if (!email.contains(" @ ") || !email.contains(".")) {
-            System.out.println(" Email inválido.");
+        if (!email.contains("@") || !email.contains(".")) {
+            System.out.println("Email inválido.");
             return false;
         }
 

@@ -31,7 +31,8 @@ public class MenuHomeService {
             System.out.println("7 - Apagar Comentário");
             System.out.println("8 - Ver Perfil");
             System.out.println("9 - Recuperar Senha");
-            System.out.println("10 - Sair\n");
+            System.out.println("10 - Sair do Perfil");
+            System.out.println("11 - Sair do Programa\n");
 
             answer = scn.nextInt();
             //###TODO colocar a validação em alguma das lógicas aqui!
@@ -58,14 +59,27 @@ public class MenuHomeService {
                     publication.deletePublication();
                     break;
                 case 8:
-                    userProfile.userDetails(userEntry);
+                    if (userEntry.getNewUser().getEmail() == null) {
+                        System.out.println("Nenhum usuário está logado. Faça login primeiro.");
+                    } else {
+                        userProfile.userDetails(userEntry);
+                    }
                     break;
                 case 9:
                     userEntry.recovery();
                     break;
                 case 10:
+                    if (userEntry.getNewUser().getEmail() == null) {
+                        System.out.println("Nenhum usuário está logado.");
+                    } else {
+                        userEntry.logout();
+                        System.out.println("Logout realizado com sucesso.");
+                    }
+                    break;
+                case 11:
                     System.out.println("Encerrando o programa!");
                     continueMenu = false;
+                    break;
                 default:
                     System.out.println("Opção inválida!");
                     break;
