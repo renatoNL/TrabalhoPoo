@@ -18,7 +18,7 @@ public class UserEntryService {
 
     public void registerUser() {
 
-        User newUser = new User(); // nova instância
+        User newUser = new User();
 
         System.out.println("===   Cadastro de Usuário  ===");
         System.out.print("Nome de usuário: ");
@@ -30,13 +30,13 @@ public class UserEntryService {
         System.out.print("Senha: ");
         String senha = scn.nextLine();
 
-        // Validação
+
         if (!validation(email, senha)) {
             System.out.println("Cadastro falhou. Dados inválidos.");
             return;
         }
 
-        // Verifica se email já existe
+
         for (User user : registeredUsers) {
             if (user.getEmail().equals(email)) {
                 System.out.println("Usuário com esse email já cadastrado!");
