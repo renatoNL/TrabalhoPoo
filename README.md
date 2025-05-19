@@ -1,5 +1,4 @@
-# TrabalhoPoo
-# 🎵 Projeto: **MusicBoxd**
+# 🎵 Projeto **MusicBoxd**
 
 ## 🧩 Introdução
 
