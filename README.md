@@ -35,18 +35,15 @@ A interface é baseada em texto, interagindo com o usuário através do console 
 - **Git:** Sistema de controle de versão usado para gerenciamento e histórico de alterações no código-fonte.
 - **GitHub:** Plataforma utilizada para hospedagem do repositório e colaboração entre os integrantes da equipe.
 
-## 📚 Lições Aprendidas
+## ▶️ Como Rodar o Projeto Localmente
 
-Durante o desenvolvimento deste projeto, a equipe:
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/musicboxd.git
+cd musicboxd
 
-- Aplicou na prática os conceitos de **Programação Orientada a Objetos**.
-- Aprendeu a trabalhar de forma colaborativa utilizando **Git e GitHub**.
-- Ganhou experiência no desenvolvimento de aplicações em **Java com interface de console**.
-- Compreendeu a importância da **organização, divisão de responsabilidades e comunicação em equipe**.
+# Compile o projeto
+mvn clean install
 
-## ✅ Conclusão
-
-O projeto **MusicBoxd** proporcionou uma experiência prática essencial para todos os integrantes do grupo, promovendo não só o aprofundamento técnico em Java e POO, como também o desenvolvimento de habilidades interpessoais e colaborativas.  
-Apesar dos desafios, a equipe entregou uma aplicação funcional e útil, consolidando os aprendizados adquiridos ao longo do curso.
-
-
+# Rode o projeto pela IDE
+```
