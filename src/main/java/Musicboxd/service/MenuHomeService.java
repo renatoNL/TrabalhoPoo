@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 @Service
 public class MenuHomeService {
 
@@ -19,79 +21,110 @@ public class MenuHomeService {
     public void telaInicial() {
         int answer;
         boolean continueMenu = true;
-
         do {
             System.out.println("\n=== Menu Inicial ===");
             System.out.println("1 - Entrar");
             System.out.println("2 - Cadastrar");
-            System.out.println("3 - Criar Playlist"); //deixa aqui por enqnt, pra facilitar o test
-            System.out.println("4 - editar Playlist");
-            System.out.println("5 - Comentar Música");
-            System.out.println("6 - Editar Comentário");
-            System.out.println("7 - Apagar Comentário");
-            System.out.println("8 - Ver Perfil");
-            System.out.println("9 - Recuperar Senha");
-            System.out.println("10 - Sair do Perfil");
-            System.out.println("11 - Sair do Programa\n");
+            System.out.println("3 - Recuperar Senha");
+            System.out.println("4 - Sair do Programa\n");
 
             answer = scn.nextInt();
-            //###TODO colocar a validação em alguma das lógicas aqui!
             switch (answer) {
                 case 1:
-                    userEntry.login();
+                  boolean resultadoLogin = userEntry.login();
+
+                    if(resultadoLogin) {
+                        menuAfterLogged();
+                    }
+
                     break;
                 case 2:
                     userEntry.registerUser();
                     break;
                 case 3:
-                    playlist.createPlaylist();
-                    break;
-                case 4:
-                    playlist.EditPlaylist();
-                    break;
-                case 5:
-                    publication.CreatePublication();
-                    break;
-                case 6:
-                    publication.editPublication();
-                    break;
-                case 7:
-                    publication.deletePublication();
-                    break;
-                case 8:
-                    if (userEntry.getNewUser().getEmail() == null) {
-                        System.out.println("Nenhum usuário está logado. Faça login primeiro.");
-                    } else {
-                        userProfile.userDetails(userEntry);
-                    }
-                    break;
-                case 9:
                     userEntry.recovery();
                     break;
-                case 10:
-                    if (userEntry.getNewUser().getEmail() == null) {
-                        System.out.println("Nenhum usuário está logado.");
-                    } else {
-                        userEntry.logout();
-                        System.out.println("Logout realizado com sucesso.");
-                    }
-                    break;
-                case 11:
+                case 4:
                     System.out.println("Encerrando o programa!");
-                    continueMenu = false;
+                    exit(0);
                     break;
                 default:
                     System.out.println("Opção inválida!");
                     break;
             }
 
-        } while (continueMenu);  }
-}
 
-//    public String menu() {
-//        System.out.println("=== Menu ===");
-//        System.out.println("1 - Publicar");
-//        System.out.println("2 - Criar Playlist");
-//        System.out.println("3 - ");
-//        return "";
-//    }
+
+        } while (continueMenu);
+    }
+
+
+    public void menuAfterLogged() {
+        boolean continueMenu = true;
+        int answer;
+
+
+        do {
+
+            System.out.println("=== Menu ===");
+            System.out.println("1 - Criar Playlist");
+            System.out.println("2 - editar Playlist");
+            System.out.println("3 - Publicar/Comentar Música");
+            System.out.println("4 - Editar publicação");
+            System.out.println("5 - Apagar publicação");
+            System.out.println("6 - Ver Perfil");
+            System.out.println("7 - Sair do Perfil");
+            System.out.println("8 - Sair do Programa\n");
+
+            answer = scn.nextInt();
+            switch (answer) {
+
+                case 1:
+                    playlist.createPlaylist();
+                    break;
+                case 2:
+                    playlist.EditPlaylist();
+                    break;
+                case 3:
+                    publication.CreatePublication();
+                    break;
+                case 4:
+                    publication.editPublication();
+                    break;
+                case 5:
+                    publication.deletePublication();
+                    break;
+                case 6:
+                    if (userEntry.getNewUser().getEmail() == null) {
+                        System.out.println("Nenhum usuário está logado. Faça login primeiro.");
+                    } else {
+                        userProfile.userDetails(userEntry);
+                    }
+                    break;
+
+                case 7:
+                    if (userEntry.getNewUser().getEmail() == null) {
+                        System.out.println("Nenhum usuário está logado.");
+                    } else {
+                        userEntry.logout();
+                        System.out.println("Logout realizado com sucesso.");
+                        telaInicial();
+                    }
+                    break;
+
+                case 8:
+                    System.out.println("Encerrando o programa!");
+                    exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
+            }
+
+
+        } while (continueMenu);
+
+    }
+
+}

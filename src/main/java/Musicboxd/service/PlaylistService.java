@@ -27,12 +27,16 @@ public class PlaylistService extends Music implements PlaylistServiceImple {
 
         System.out.print("Informe o nome da sua playlist: ");
         playlistUser.setPlaylistName(scn.nextLine());
-        playlist.add("=== Playlist  " + playlistUser.getPlaylistName() + " ===");
+        playlist.add("\n--------------- Playlist " + playlistUser.getPlaylistName() + " ---------------");
 
 
         insertSongOnPlaylist();
 
         playlistUser.setPlaylistID(playlistid + 1); //incremento do id semrpe q for criado uma nova playlist
+
+
+        // 1- allPlayListsUser - É uma lista de listas, toda playlist criada será inserida nessa lista "pai"
+        // 2- cada playlist terá seu id
 
         allPlayListsUser.add(new Playlist(playlistUser.getPlaylistID(), playlist, playlistUser.getPlaylistName())); //list para inserir playlists criadas
 
@@ -59,23 +63,6 @@ public class PlaylistService extends Music implements PlaylistServiceImple {
 
 
 
-
-
-    // 1- allPlayListsUser - É uma lista de listas, toda playlist criada será inserida nessa lista "pai"
-    // 2- cada playlist terá seu id unico (pode ser uma variavel local msm)
-
-
-
-
-
-    //   ;Lista com playlists criadas pelo usuario
-    //   cada uma possui id e nome, e claro, seu conteudo (inserido dentro da lista playlist).
-    //        for (Playlist playlists : allPlayListsUser) {  //Printar todas Playlists do Usuario
-    //
-    //            System.out.println(playlists.getUserPlaylist());
-    //
-    //
-    //        }
     @Override
 public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das playlists
        for (Playlist playlist : allPlayListsUser)  //esse for permite q a variavel playlist, por receber playlists do usuario, utilizar o metodo getName em cada playlist.
@@ -117,7 +104,7 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
                     switch (resp) {
                         case 1:
                             scn.nextLine();
-                            System.out.println("Informe o novo nome ");
+                            System.out.println("\n--------------- Informe o novo nome ---------------\" ");
                             playlistSelecionada.setPlaylistName(scn.nextLine());
                             break;
 
@@ -129,7 +116,7 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
                         case 3:
 
                             if (playlistSelecionada.getUserPlaylist().isEmpty()) {
-                                System.out.println("Não há nenhuma musica na playlist para apagar");
+                                System.out.println("\nNão há nenhuma musica na playlist para apagar");
                                 return;
                             } else {
                                 deleteSongOnPlaylist(playlistSelecionada);
@@ -138,6 +125,7 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
 
                         case 4:
                             allPlayListsUser.remove(numeroPlaylist - 1);
+                            System.out.println("\n--------------- Playlist deletada! ---------------");
                             break;
 
                     }
@@ -162,12 +150,12 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
         scn.nextLine(); //variavel para receber o buffer do int (evitar bug);
 
         if (quantitySongs == 0){
-            System.out.println("Nenhuma música inserida");
+            System.out.println("\nNenhuma música inserida");
         } else {
-            System.out.println("Informe agora os detalhes das músicas que deseja inserir na Playlist");
+            System.out.println("\nInforme agora os detalhes das músicas que deseja inserir na Playlist");
 
             for (int x = 1; x <= quantitySongs; x++) {
-                //sempre q houver a chamada do metodo insertsongonplaylist, a musica recebe seu id
+
                 setMusicID(getMusicID() + 1);
                 System.out.printf("\nNome da %d música = ", x);
                 setSongName(scn.nextLine()); //Inserção direta de string para parametro do metodo da class Music
@@ -206,7 +194,7 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
             scn.nextLine();
             String songToDelete = scn.nextLine();
             if (playlists.getUserPlaylist().contains(songToDelete)) {
-                for (int i = 0; i < playlists.getUserPlaylist().size(); i++) { //cada item da list conta no seu comprimento, logo, 1 musica = 4 itens (nome, artista, genero, album) 2 musicas = 8 itens...
+                for (int i = 0; i < playlists.getUserPlaylist().size(); i++) {
 
                     String musicDeleted = playlists.getUserPlaylist().get(i); //recebe os indices da list.
 
@@ -217,7 +205,7 @@ public void getPlaylistsNames(){ //função exclusiva pra imrpimir o nome das pl
 
                         }
 
-                        musicaId.remove(songToDelete); //remoção do da musica no hashmap)
+                        musicaId.remove(songToDelete);
                         break;
                     }
                 }

@@ -52,7 +52,7 @@ public class UserEntryService {
         System.out.println("Usuário cadastrado com sucesso!");
     }
 
-    public void login() {
+    public boolean login() {
 
         System.out.println("==== Login ====");
         System.out.print("Email: ");
@@ -69,15 +69,17 @@ public class UserEntryService {
 
                 this.newUser = user;
                 System.out.println("Login bem-sucedido! Bem-vindo, " + user.getName());
-                return;
+                return true;
             }
         }
         System.out.println("Email ou  senha incorretos.");
+        return false;
     }
 
     public User getNewUser(){
         return newUser;
     }
+
     public void recovery() {
 
         System.out.println("=== Recuperação de Senha ===");
