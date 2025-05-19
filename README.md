@@ -39,8 +39,8 @@ A interface é baseada em texto, interagindo com o usuário através do console 
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/musicboxd.git
-cd musicboxd
+git clone https://github.com/renatoNL/TrabalhoPoo.git
+cd TrabalhoPoo
 
 # Compile o projeto
 mvn clean install
