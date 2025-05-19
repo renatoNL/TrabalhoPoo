@@ -19,11 +19,6 @@ public class PublicationService extends Music {
         Publication newPublication = new Publication();
         List<String> publicationOutput = new ArrayList<>();
 
-        //newPublication.setPublicationId(indexPublication);
-
-//        int id = 0;
-//        int PublicationId = id + 1;
-//        PublicationId.add(PublicationId);
 
         System.out.println("\n--------------- Digite a música ---------------");
         String songName = scn.nextLine();
@@ -116,7 +111,7 @@ public class PublicationService extends Music {
 
         System.out.println("\n--------------- Deseja deixar uma curtida? ---------------");
         String newAnswer = scn.nextLine();
-        selected.setLiked(newAnswer.equalsIgnoreCase("SIM"));//atualiza a curtida
+        selected.setLiked(newAnswer.equalsIgnoreCase("SIM"));
 
         System.out.println("Publicação atualizada!");
     }
