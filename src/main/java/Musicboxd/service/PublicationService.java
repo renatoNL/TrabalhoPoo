@@ -1,5 +1,6 @@
 
 package Musicboxd.service;
+import Musicboxd.interfaces.PublicationServiceImple;
 import Musicboxd.model.Publication;
 import Musicboxd.model.Music;
 import org.springframework.stereotype.Service;
@@ -7,46 +8,50 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
-public class PublicationService extends Music {
+public class PublicationService extends Music implements PublicationServiceImple {
 
     Scanner scn = new Scanner(System.in);
 
     int indexPublication = 0;
     List<Publication> allPublications = new ArrayList<>();    List<String> MusicNames = new ArrayList<>();
     List<Integer> PublicationId = new ArrayList<Integer>();
-    public void CreatePublication() {
 
-        Publication newPublication = new Publication();
+
+    @Override
+    public void createPublication() {
+
         List<String> publicationOutput = new ArrayList<>();
+        Publication newPublication = new Publication();
 
 
-        System.out.println("\n--------------- Digite a música ---------------");
+
+        System.out.println("\n------  Digite o nome da música ------ ");
         String songName = scn.nextLine();
 
         MusicNames.add(songName);
 
-        System.out.println("\n--------------- Deseja escrever um comentário? ---------------");
+        System.out.println("\n------ Deseja escrever um comentário(Sim/Não)? ------ ");
         String answer = scn.nextLine();//caso o usuario responda sim, ele poderá deixar um comentario sobre a musica
         if (answer.equalsIgnoreCase("sim")) {
 
-            System.out.println("\n--------------- Escreva o seu comentário: ---------------");
+            System.out.println("\n------ Escreva o seu comentário: ------ ");
             String comment = scn.nextLine();
             newPublication.setComment(comment);
-            publicationOutput.add("Comentário: " + comment + ("\n---------------"));//mostra o comentário na hora da saída dos dados.
+            publicationOutput.add("Comentário: " + comment + ("\n------ "));//mostra o comentário na hora da saída dos dados.
 
         }
 
-        System.out.println("\n--------------- Deixe sua avaliação ---------------");
+        System.out.println("\n------ Deixe sua avaliação ------ ");
         int rating = scn.nextInt();
 
         rating = Math.max(0,Math.min(10, rating));//verifica se o numero é menor que 0 ou maior que 10 para evitar avaliações inválidas
 
         newPublication.setRating(rating);
-        publicationOutput.add("Avaliação: " + rating + ("\n---------------"));
+        publicationOutput.add("Avaliação: " + rating + ("\n------ "));
 
         scn.nextLine();//consome a quebra de linha deixada pelo nextInt
 
-        System.out.println("\n--------------- Deseja deixar uma curtida? ---------------");
+        System.out.println("\n------  Deseja deixar uma curtida?(Sim/Não) ------ ");
         answer = scn.nextLine();
 
         if (answer.equalsIgnoreCase("SIM")) {//condicional para verificar se o usuario quer deixar uma curtida
@@ -60,17 +65,23 @@ public class PublicationService extends Music {
         System.out.println("Comentário adicionado!");
 
         for (String publications : publicationOutput) {
-            System.out.println(publications);
+            if(allPublications.isEmpty())
+            {
+                System.out.println("Você ainda não comentou nenhuma música!");
+            }
+            else System.out.println(publications);
         }
-
-             //cria uma variavel temporaria que percorre os dados de publication e imprime
-
-        //        public void EditPublication() {
-        //
-        //        }
 
     }
 
+    @Override
+    public void showPublications() {
+        for(int i = 0;){
+
+        }
+    }
+
+    @Override
     public void editPublication() {
 
         if (allPublications.isEmpty()){//verifica se há comentários
@@ -81,7 +92,9 @@ public class PublicationService extends Music {
         System.out.println("======= Publicações =======");
         for (int i = 0; i < allPublications.size(); i++){
             System.out.println("[" + i + "] " + MusicNames.get(i));
-            System.out.println(allPublications.get(i).getComment());
+            if (allPublications.get(i).getComment() == null){
+                System.out.println("");
+            }
         }//percorre os índices dos comentários e mostra alem do indice o nome da musica e o comentario relacionado
 
         System.out.println("\n--------------- Escolha o número da publicação que você deseja editar ---------------");
@@ -116,10 +129,7 @@ public class PublicationService extends Music {
         System.out.println("Publicação atualizada!");
     }
 
-    public void addMusic() {
-
-    }
-
+    @Override
     public void deletePublication() {
 
         if (allPublications.isEmpty()) {
@@ -129,7 +139,9 @@ public class PublicationService extends Music {
 
         for (int i = 0; i < allPublications.size(); i++) {
             System.out.println("[" + i + "] " + MusicNames.get(i));
-            System.out.println(allPublications.get(i).getComment());
+            if (allPublications.get(i).getComment() == null){
+                System.out.println("");
+            }
         }
 
 
@@ -144,11 +156,5 @@ public class PublicationService extends Music {
 
 
     }
-
-    public void FeatureInProfile() {
-
-    }//
-
-
 
 }

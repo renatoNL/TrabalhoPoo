@@ -69,12 +69,13 @@ public class MenuHomeService {
             System.out.println("=== Menu ===");
             System.out.println("1 - Criar Playlist");
             System.out.println("2 - editar Playlist");
-            System.out.println("3 - Publicar/Comentar Música");
-            System.out.println("4 - Editar publicação");
-            System.out.println("5 - Apagar publicação");
-            System.out.println("6 - Ver Perfil");
-            System.out.println("7 - Sair do Perfil");
-            System.out.println("8 - Sair do Programa\n");
+            System.out.println("3 - Comentar Música");
+            System.out.println("4 - Ver suas Publicações");
+            System.out.println("5 - Editar publicação");
+            System.out.println("6 - Apagar publicação");
+            System.out.println("7 - Ver Perfil");
+            System.out.println("8 - Sair do Perfil");
+            System.out.println("9 - Sair do Programa\n");
 
             answer = scn.nextInt();
             switch (answer) {
@@ -86,15 +87,18 @@ public class MenuHomeService {
                     playlist.EditPlaylist();
                     break;
                 case 3:
-                    publication.CreatePublication();
+                    publication.createPublication();
                     break;
                 case 4:
-                    publication.editPublication();
+                    publication.showPublications();
                     break;
                 case 5:
-                    publication.deletePublication();
+                    publication.editPublication();
                     break;
                 case 6:
+                    publication.deletePublication();
+                    break;
+                case 7:
                     if (userEntry.getNewUser().getEmail() == null) {
                         System.out.println("Nenhum usuário está logado. Faça login primeiro.");
                     } else {
@@ -102,7 +106,7 @@ public class MenuHomeService {
                     }
                     break;
 
-                case 7:
+                case 8:
                     if (userEntry.getNewUser().getEmail() == null) {
                         System.out.println("Nenhum usuário está logado.");
                     } else {
@@ -112,7 +116,7 @@ public class MenuHomeService {
                     }
                     break;
 
-                case 8:
+                case 9:
                     System.out.println("Encerrando o programa!");
                     exit(0);
                     break;
