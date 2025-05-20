@@ -46,16 +46,14 @@ public class MenuHomeService {
                     break;
                 case 4:
                     System.out.println("Encerrando o programa!");
-                    exit(0);
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Opção inválida!");
                     break;
             }
-
-
-
         } while (continueMenu);
+
     }
 
 
@@ -63,10 +61,9 @@ public class MenuHomeService {
         boolean continueMenu = true;
         int answer;
 
-
         do {
 
-            System.out.println("=== Menu ===");
+            System.out.println("\n=== Menu ===");
             System.out.println("1 - Criar Playlist");
             System.out.println("2 - editar Playlist");
             System.out.println("3 - Comentar Música");
@@ -118,7 +115,7 @@ public class MenuHomeService {
 
                 case 9:
                     System.out.println("Encerrando o programa!");
-                    exit(0);
+                    System.exit(0);
                     break;
 
                 default:

@@ -13,7 +13,8 @@ public class PublicationService extends Music implements PublicationServiceImple
     Scanner scn = new Scanner(System.in);
 
     int indexPublication = 0;
-    List<Publication> allPublications = new ArrayList<>();    List<String> MusicNames = new ArrayList<>();
+    List<Publication> allPublications = new ArrayList<>();
+    List<String> MusicNames = new ArrayList<>();
     List<Integer> PublicationId = new ArrayList<Integer>();
 
 
@@ -56,13 +57,14 @@ public class PublicationService extends Music implements PublicationServiceImple
 
         if (answer.equalsIgnoreCase("SIM")) {//condicional para verificar se o usuario quer deixar uma curtida
             newPublication.setLiked(true);
-            System.out.println("Like");
 
         }
 
         allPublications.add(newPublication);
 
-        System.out.println("Comentário adicionado!");
+        System.out.println("------ ");
+        System.out.println("\nComentário adicionado!\n");
+        System.out.println("------ ");
 
         for (String publications : publicationOutput) {
             if(allPublications.isEmpty())
@@ -76,7 +78,18 @@ public class PublicationService extends Music implements PublicationServiceImple
 
     @Override
     public void showPublications() {
-        for(int i = 0;){
+        for(int i = 0; i < allPublications.size(); i++) {
+            System.out.printf("\n------ [ %d ] Comentário da música : %s ------ \n",i,MusicNames.get(i));
+
+            if (allPublications.get(i).getComment() == null){
+                System.out.println("");
+            }else System.out.printf("Comentário: %s\n",allPublications.get(i).getComment());
+            System.out.println("------\n");
+            System.out.printf("Avaliação: %s\n",allPublications.get(i).getRating());
+            System.out.println("------ \n");
+            if (allPublications.get(i).liked){
+                System.out.println("Comentário curtido\n");
+            }else System.out.println("Comentário não curtido\n");
 
         }
     }
@@ -91,7 +104,7 @@ public class PublicationService extends Music implements PublicationServiceImple
 
         System.out.println("======= Publicações =======");
         for (int i = 0; i < allPublications.size(); i++){
-            System.out.println("[" + i + "] " + MusicNames.get(i));
+            System.out.printf("[ %d ]",i,MusicNames.get(i));
             if (allPublications.get(i).getComment() == null){
                 System.out.println("");
             }
@@ -108,10 +121,11 @@ public class PublicationService extends Music implements PublicationServiceImple
 
         Publication selected = allPublications.get(index);//variavel selected para armazenar o objeto da list na posicao digitada pelo usuario
 
-        System.out.println("\n--> Comentário antigo: " + selected.getComment());//atualiza o comentário
+        System.out.println("\n--> Comentário antigo: " + selected.getComment());
         System.out.println("\n--------------- Escreva o seu comentário: ---------------");
         String newComment = scn.nextLine();
         selected.setComment(newComment);
+        //atualiza o comentário
 
         System.out.println("\n-->Avaliação antiga: " + selected.getRating());
         System.out.println("\n--------------- Avaliação: ---------------");
@@ -120,7 +134,7 @@ public class PublicationService extends Music implements PublicationServiceImple
         newRating = Math.max(1,Math.min(10, newRating));
 
         selected.setRating(newRating);//atualiza a avalição do usuário
-        scn.nextLine();//consumir quebra
+        scn.nextLine();//consumir quebra de linha para evitar bugs
 
         System.out.println("\n--------------- Deseja deixar uma curtida? ---------------");
         String newAnswer = scn.nextLine();
