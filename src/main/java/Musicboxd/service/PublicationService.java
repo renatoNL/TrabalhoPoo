@@ -15,21 +15,23 @@ public class PublicationService extends Music implements PublicationServiceImple
     int indexPublication = 0;
     List<Publication> allPublications = new ArrayList<>();
     List<String> MusicNames = new ArrayList<>();
-    List<Integer> PublicationId = new ArrayList<Integer>();
+    Publication newPublication = new Publication();
 
+//##todo criar menu de escolha para o que o usuario quer editar na publicação e implementar logica do id
+    int publicationId = 0;
 
     @Override
     public void createPublication() {
 
         List<String> publicationOutput = new ArrayList<>();
-        Publication newPublication = new Publication();
-
 
 
         System.out.println("\n------  Digite o nome da música ------ ");
         String songName = scn.nextLine();
 
         MusicNames.add(songName);
+
+        newPublication.setPublicationId(publicationId + 1);//incrementa id em cada publicação criada
 
         System.out.println("\n------ Deseja escrever um comentário(Sim/Não)? ------ ");
         String answer = scn.nextLine();//caso o usuario responda sim, ele poderá deixar um comentario sobre a musica
