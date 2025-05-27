@@ -1,9 +1,8 @@
 package Musicboxd.model;
 
 import jakarta.persistence.*;
-import lombok.*;
-
 import java.util.List;
+import lombok.*;
 
 @Entity
 
@@ -12,6 +11,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Publication {
 
     @Id
@@ -22,7 +22,5 @@ public class Publication {
     private String comment;
     private int rating;
     private boolean liked;
-
-    public int indexPublication; // qual a utilidade disso?
 
 }
