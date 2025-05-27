@@ -13,7 +13,8 @@ public class PublicationService extends Music implements PublicationServiceImple
     Scanner scn = new Scanner(System.in);
 
     int indexPublication = 0;
-    List<Publication> allPublications = new ArrayList<>();
+    static  List<Publication> allPublications = new ArrayList<>();
+    static  List<String> publicationOutput = new ArrayList<>();
     List<String> MusicNames = new ArrayList<>();
     Publication newPublication = new Publication();
 
@@ -22,8 +23,6 @@ public class PublicationService extends Music implements PublicationServiceImple
 
     @Override
     public void createPublication() {
-
-        List<String> publicationOutput = new ArrayList<>();
 
 
         System.out.println("\n------  Digite o nome da música ------ ");
@@ -62,7 +61,7 @@ public class PublicationService extends Music implements PublicationServiceImple
 
         }
 
-        allPublications.add(newPublication);
+        allPublications.add(new Publication());
 
         System.out.println("------ ");
         System.out.println("\nComentário adicionado!\n");
@@ -80,18 +79,21 @@ public class PublicationService extends Music implements PublicationServiceImple
 
     @Override
     public void showPublications() {
-        for(int i = 0; i < allPublications.size(); i++) {
-            System.out.printf("\n------ [ %d ] Comentário da música : %s ------ \n",i,MusicNames.get(i));
+        for(Publication publication : allPublications){
+            System.out.println(publication.getComment());
 
-            if (allPublications.get(i).getComment() == null){
-                System.out.println("");
-            }else System.out.printf("Comentário: %s\n",allPublications.get(i).getComment());
-            System.out.println("------\n");
-            System.out.printf("Avaliação: %s\n",allPublications.get(i).getRating());
-            System.out.println("------ \n");
-            if (allPublications.get(i).liked){
-                System.out.println("Comentário curtido\n");
-            }else System.out.println("Comentário não curtido\n");
+//        }        for(int i = 0; i < allPublications.size(); i++) {
+//            System.out.printf("\n------ [ %d ] Comentário da música : %s ------ \n",i,MusicNames.get(i));
+//
+//            if (allPublications.get(i).getComment() == null){
+//                System.out.println("");
+//            }else System.out.printf("Comentário: %s\n",allPublications.get(i).getComment());
+//            System.out.println("------\n");
+//            System.out.printf("Avaliação: %s\n",allPublications.get(i).getRating());
+//            System.out.println("------ \n");
+//            if (allPublications.get(i).liked){
+//                System.out.println("Comentário curtido\n");
+//            }else System.out.println("Comentário não curtido\n");
 
         }
     }

@@ -1,16 +1,18 @@
 
 
 
-package Musicboxd.service;
+package Musicboxd.view;
 
+import Musicboxd.service.PlaylistService;
+import Musicboxd.service.PublicationService;
+import Musicboxd.service.UserEntryService;
+import Musicboxd.service.UserProfileService;
 import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
-import static java.lang.System.exit;
-
 @Service
-public class MenuHomeService {
+public class MenuHome {
 
     Scanner scn = new Scanner(System.in);
     PlaylistService playlist = new PlaylistService();

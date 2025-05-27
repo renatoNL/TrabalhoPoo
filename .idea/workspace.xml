@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="updates no PublicationService(melhoria na saída de dados e implementação do showPublications) &amp;&amp;">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="resolvi o erro de peidoel, e estou a terminar o UserEntryService">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Publication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/view/MenuHome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PublicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PublicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/view/Musicboxd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,7 +46,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
@@ -49,7 +53,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/renatoNL/TrabalhoPoo.git&quot;,
-    &quot;accountId&quot;: &quot;6c1bedb2-5232-4463-9918-5f7d04dcb8bb&quot;
+    &quot;accountId&quot;: &quot;ca49ebfa-ddb0-44e7-ac78-8eb6351964f1&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -74,6 +78,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Musicboxd.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MusicboxdApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in demo.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
@@ -84,6 +90,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.MusicboxdApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;#10 on dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -100,6 +107,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="All in demo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MusicboxdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="demo" />
@@ -108,14 +123,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
-      </set>
-    </attachedChunks>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in demo" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -128,8 +140,8 @@
       <workItem from="1745972833317" duration="6929000" />
       <workItem from="1746750900886" duration="347000" />
       <workItem from="1746751289033" duration="3135000" />
-      <workItem from="1747788668459" duration="2479000" />
-      <workItem from="1747835300415" duration="489000" />
+      <workItem from="1746989322013" duration="2355000" />
+      <workItem from="1746997826364" duration="1329000" />
     </task>
     <task id="LOCAL-00001" summary="EditPublication">
       <option name="closed" value="true" />
@@ -147,13 +159,13 @@
       <option name="project" value="LOCAL" />
       <updated>1746754328631</updated>
     </task>
-    <task id="LOCAL-00003" summary="updates no PublicationService(melhoria na saída de dados e implementação do showPublications) &amp;&amp;">
+    <task id="LOCAL-00003" summary="resolvi o erro de peidoel, e estou a terminar o UserEntryService">
       <option name="closed" value="true" />
-      <created>1747762553595</created>
+      <created>1747089186098</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1747762553595</updated>
+      <updated>1747089186098</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -163,7 +175,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="EditPublication" />
-    <MESSAGE value="updates no PublicationService(melhoria na saída de dados e implementação do showPublications) &amp;&amp;" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates no PublicationService(melhoria na saída de dados e implementação do showPublications) &amp;&amp;" />
+    <MESSAGE value="resolvi o erro de peidoel, e estou a terminar o UserEntryService" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolvi o erro de peidoel, e estou a terminar o UserEntryService" />
   </component>
 </project>
