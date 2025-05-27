@@ -2,15 +2,15 @@
 
 ## 🧩 Introdução
 
-- **Nome do Projeto:** MusicBoxd  
-- **Contexto:** Desenvolvido como atividade avaliativa (AT) para o curso de Análise e Desenvolvimento de Sistemas (ADS).  
-- **Objetivo Principal:** Criar uma aplicação de música utilizando a linguagem Java, aplicando conceitos de Programação Orientada a Objetos (POO).  
+- **Nome do Projeto:** MusicBoxd
+- **Contexto:** Desenvolvido como atividade avaliativa (AT) para o curso de Análise e Desenvolvimento de Sistemas (ADS).
+- **Objetivo Principal:** Criar uma aplicação de música utilizando a linguagem Java, aplicando conceitos de Programação Orientada a Objetos (POO).
 - **Equipe de Desenvolvimento:**
   - 👨‍💻 [Leonardo Antonio](https://github.com/leonard0antonio)
   - 👨‍💻 [Renato Nascimento](https://github.com/renatoNL)
   - 👨‍💻 [Emmanuel Guerra](https://github.com/Emmanuel1421)
   - 👨‍💻 [Miguel Vieira](https://github.com/MiguelOlivieira)
-  - 👨‍💻 [Luan Richard](https://github.com/luanrichardsz) 
+  - 👨‍💻 [Luan Richard](https://github.com/luanrichardsz)
 
 ## 🚀 Principais Funcionalidades do Musicboxd
 
