@@ -5,14 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="EditPublication">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/control/UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/control/UserControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Publication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/MenuHomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PlaylistControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PublicationControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/PublicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserEntryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserProfileControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/service/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/view/Musicboxd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -79,6 +85,8 @@
   "keyToString": {
     "Application.Musicboxd.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "Database connection parameters found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -87,7 +95,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.MusicboxdApplication.executor": "Run",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "#10 on dev",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -134,7 +142,15 @@
       <workItem from="1746750900886" duration="347000" />
       <workItem from="1746751289033" duration="3135000" />
       <workItem from="1746989322013" duration="2355000" />
-      <workItem from="1746997826364" duration="1329000" />
+      <workItem from="1746997826364" duration="12730000" />
+      <workItem from="1747076653802" duration="2762000" />
+      <workItem from="1747260395796" duration="330000" />
+      <workItem from="1747345487228" duration="3353000" />
+      <workItem from="1747351456758" duration="117000" />
+      <workItem from="1747352312956" duration="511000" />
+      <workItem from="1747354400620" duration="71000" />
+      <workItem from="1747354830303" duration="2345000" />
+      <workItem from="1748340373781" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="EditPublication">
       <option name="closed" value="true" />

@@ -12,12 +12,17 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class Publication extends Music {
+public class Publication {
 
-    @ElementCollection
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int publicationID;
     private List<String> publication;
+    private String title;
+    private String comment;
+    private int rating;
+    private boolean liked;
 
-    public String comment;
-    public int rating;
-    public boolean liked;
+    public int indexPublication; // qual a utilidade disso?
+
 }

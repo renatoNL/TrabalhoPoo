@@ -16,9 +16,7 @@ public class Playlist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int playlistID;
-
-    @ElementCollection
+    private long playlistID;
     private List<String> userPlaylist;
     private String playlistName;
 
