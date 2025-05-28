@@ -1,4 +1,9 @@
+src/main/java/Musicboxd/anotacoes.txt
+out/
+.idea/
+TrabalhoPoo.iml
 HELP.md
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
