@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77266d37-532e-45c5-a94f-e9ee8bf6f381" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Musicboxd/model/Music.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +16,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "renatoNL"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;renatoNL&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/renatoNL/TrabalhoPoo.git",
-    "accountId": "fb77715e-7200-4f98-bae5-69325fed70e8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/renatoNL/TrabalhoPoo.git&quot;,
+    &quot;accountId&quot;: &quot;fb77715e-7200-4f98-bae5-69325fed70e8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2xiqpcpcaiKkqUVjKMiD1EwwpG2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.MusicboxdApplication.executor": "Run",
-    "git-widget-placeholder": "#10 on dev",
+    "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -78,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748431428072</updated>
       <workItem from="1748431430498" duration="5076000" />
+      <workItem from="1748873949126" duration="3136000" />
     </task>
     <servers />
   </component>
