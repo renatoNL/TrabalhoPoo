@@ -1,7 +1,7 @@
 package Musicboxd.control;
 
 import Musicboxd.dto.UserRecordDto;
-import Musicboxd.exception.UserNotFoundException;
+import Musicboxd.exceptions.UserNotFoundException;
 import Musicboxd.model.User;
 import Musicboxd.repository.UserRepository;
 import jakarta.validation.Valid;
