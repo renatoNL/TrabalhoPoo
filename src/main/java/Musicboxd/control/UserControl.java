@@ -1,6 +1,7 @@
 package Musicboxd.control;
 
 import Musicboxd.dto.UserRecordDto;
+import Musicboxd.exceptions.UserNotFoundException;
 import Musicboxd.model.User;
 import Musicboxd.repository.UserRepository;
 import jakarta.validation.Valid;
@@ -34,21 +35,18 @@ public class UserControl {
 
     @GetMapping("/users/{id}")
     public ResponseEntity<Object> getOneUser(@PathVariable(value = "id") Long userID) {
-        Optional<User> user0 = userRepository.findById(userID);
-        return user0.<ResponseEntity<Object>>map(user -> ResponseEntity.status(HttpStatus.OK).body(user)).orElseGet(
-                () -> ResponseEntity.status(HttpStatus.NOT_FOUND).body("User is not found"));
+        User user0 = userRepository.findById(userID).orElseThrow(() -> new UserNotFoundException(userID));
+
+        return ResponseEntity.status(HttpStatus.OK).body(user0);
     }
 
     @PutMapping("/users/{id}")
     public ResponseEntity<Object> updateUser(@PathVariable(value = "id") Long userID,
                                              @RequestBody @Valid UserRecordDto userRecordDto) {
-        Optional<User> user0 = userRepository.findById(userID);
-        if (user0.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User is not found");
-        }
-        var user = user0.get();
-        BeanUtils.copyProperties(userRecordDto, user);
-        return ResponseEntity.status(HttpStatus.OK).body(userRepository.save(user));
+        User user0 = userRepository.findById(userID).orElseThrow(() -> new UserNotFoundException(userID));
+
+        BeanUtils.copyProperties(userRecordDto, user0);
+        return ResponseEntity.status(HttpStatus.OK).body(userRepository.save(user0));
     }
 
     @DeleteMapping("/users/{id}")
