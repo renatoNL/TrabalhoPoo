@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/control/PublicationControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/control/UserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/MenuHome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/PlaylistControl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/control/UserEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Music.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/model/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TrabalhoPoo/view/Musicboxd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/PlaylistControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/PlaylistControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/UserEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/UserEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Musicboxd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Musicboxd.java" afterDir="false" />
-    </list>
+    <list default="true" id="af0c6ecf-c260-4112-85e5-176e96311cc4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,22 +20,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "renatoNL"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;renatoNL&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/renatoNL/TrabalhoPoo.git",
-    "accountId": "fb77715e-7200-4f98-bae5-69325fed70e8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/renatoNL/TrabalhoPoo.git&quot;,
+    &quot;accountId&quot;: &quot;fb77715e-7200-4f98-bae5-69325fed70e8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2wQTWXQUzmsrDNlwU0XvEmVmhI2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,10 +45,14 @@
   "keyToString": {
     "Application.Musicboxd.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
