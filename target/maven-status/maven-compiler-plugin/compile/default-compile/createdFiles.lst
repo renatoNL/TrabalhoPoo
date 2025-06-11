@@ -1,0 +1,6 @@
+Musicboxd\model\Music.class
+Musicboxd\model\Publication.class
+Musicboxd\model\User.class
+Musicboxd\view\Musicboxd.class
+Musicboxd\model\Playlist.class
+Musicboxd\MusicboxdApplication.class
