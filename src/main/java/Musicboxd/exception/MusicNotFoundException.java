@@ -4,9 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class UserNotFoundException extends RuntimeException {
+public class MusicNotFoundException extends RuntimeException {
 
-    public UserNotFoundException(Long id) {
-        super("User with ID " + id + " not found.");
+    public MusicNotFoundException(Long id) {
+        super("Music with ID " + id + " not found.");
     }
 }

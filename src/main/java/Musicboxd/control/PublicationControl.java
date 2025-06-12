@@ -3,6 +3,7 @@ package Musicboxd.control;
 import Musicboxd.dto.PublicationRecordDto;
 import Musicboxd.model.Publication;
 import Musicboxd.repository.PublicationRepository;
+import Musicboxd.exception.PublicationNotFoundException; // Import your new exception
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class PublicationControl {
@@ -32,32 +32,28 @@ public class PublicationControl {
     }
 
     @GetMapping("/publications/{id}")
-    public ResponseEntity<Object> getOnePublication(@PathVariable(value = "id") Long publicationID) {
-        Optional<Publication> publication0 = publicationRepository.findById(publicationID);
-        return publication0.<ResponseEntity<Object>>map(publication ->
-                ResponseEntity.status(HttpStatus.OK).body(publication)).orElseGet(() ->
-                ResponseEntity.status(HttpStatus.NOT_FOUND).body("Publication is not found"));
+    public ResponseEntity<Publication> getOnePublication(@PathVariable(value = "id") Long publicationID) {
+        Publication publication = publicationRepository.findById(publicationID)
+                .orElseThrow(() -> new PublicationNotFoundException(publicationID));
+        return ResponseEntity.status(HttpStatus.OK).body(publication);
     }
 
     @PutMapping("/publications/{id}")
-    public ResponseEntity<Object> updatePublication(@PathVariable(value = "id") Long publicationID,
-                                                    @RequestBody @Valid PublicationRecordDto publicationRecordDto) {
-        Optional<Publication> publication0 = publicationRepository.findById(publicationID);
-        if (publication0.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Publication is not found");
-        }
-        var publication = publication0.get();
+    public ResponseEntity<Publication> updatePublication(@PathVariable(value = "id") Long publicationID,
+                                                         @RequestBody @Valid PublicationRecordDto publicationRecordDto) {
+        Publication publication = publicationRepository.findById(publicationID)
+                .orElseThrow(() -> new PublicationNotFoundException(publicationID));
+
         BeanUtils.copyProperties(publicationRecordDto, publication);
         return ResponseEntity.status(HttpStatus.OK).body(publicationRepository.save(publication));
     }
 
     @DeleteMapping("/publications/{id}")
-    public ResponseEntity<Object> deleteOnePublication(@PathVariable(value = "id") Long publicationID) {
-        Optional<Publication> publication0 = publicationRepository.findById(publicationID);
-        if (publication0.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Publication is not found");
-        }
-        publicationRepository.delete(publication0.get());
+    public ResponseEntity<String> deleteOnePublication(@PathVariable(value = "id") Long publicationID) {
+        Publication publication = publicationRepository.findById(publicationID)
+                .orElseThrow(() -> new PublicationNotFoundException(publicationID));
+
+        publicationRepository.delete(publication);
         return ResponseEntity.status(HttpStatus.OK).body("Publication is deleted successfully");
     }
 }

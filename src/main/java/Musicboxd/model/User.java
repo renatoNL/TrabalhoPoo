@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
+
 public class User {
 
     @Id
@@ -24,6 +24,5 @@ public class User {
     private String email;
     private String gender;
     private String password;
-
 
 }

@@ -13,7 +13,7 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class  Music {
+public class Music {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

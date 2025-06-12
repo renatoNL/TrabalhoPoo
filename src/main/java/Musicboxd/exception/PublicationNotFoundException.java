@@ -4,9 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class UserNotFoundException extends RuntimeException {
+public class PublicationNotFoundException extends RuntimeException {
 
-    public UserNotFoundException(Long id) {
-        super("User with ID " + id + " not found.");
+    public PublicationNotFoundException(Long id) {
+        super("Publication with ID " + id + " not found.");
     }
 }

@@ -3,7 +3,6 @@ out/
 .idea/
 TrabalhoPoo.iml
 HELP.md
-.idea/workspace.xml
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
