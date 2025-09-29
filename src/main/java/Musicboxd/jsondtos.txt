@@ -1,0 +1,134 @@
+MusicRecord
+
+[
+  {
+    "songName": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "album": "Nevermind"
+  },
+  {
+    "songName": "Billie Jean",
+    "artist": "Michael Jackson",
+    "genre": "Pop",
+    "album": "Thriller"
+  },
+  {
+    "songName": "Stairway to Heaven",
+    "artist": "Led Zeppelin",
+    "genre": "Hard Rock",
+    "album": "Led Zeppelin IV"
+  },
+  {
+    "songName": "Garota de Ipanema",
+    "artist": "Tom Jobim",
+    "genre": "Bossa Nova",
+    "album": "Getz/Gilberto"
+  },
+  {
+    "songName": "Like a Rolling Stone",
+    "artist": "Bob Dylan",
+    "genre": "Folk Rock",
+    "album": "Highway 61 Revisited"
+  }
+]
+//
+
+PlaylistRecord 
+
+//
+[
+  {
+    "userPlaylist": [
+      "Blinding Lights",
+      "As It Was",
+      "Levitating",
+      "Save Your Tears"
+    ],
+    "playlistName": "Hits Atuais"
+  },
+  {
+    "userPlaylist": [
+      "Águas de Março",
+      "Construção",
+      "O Bêbado e a Equilibrista",
+      "Anunciação"
+    ],
+    "playlistName": "Clássicos da MPB"
+  },
+  {
+    "userPlaylist": [
+      "Lose Yourself",
+      "Till I Collapse",
+      "Eye of the Tiger"
+    ],
+    "playlistName": "Músicas para Malhar"
+  },
+  {
+    "userPlaylist": [],
+    "playlistName": "Para Relaxar (Vazia)"
+  }
+]
+
+//
+
+PublicationRecord
+
+//
+[
+  {
+    "title": "Opinião sobre 'Thriller' de Michael Jackson",
+    "comment": "Um álbum que redefiniu a música pop. Produção impecável e clipes icônicos. Essencial.",
+    "rating": 5,
+    "liked": true
+  },
+  {
+    "title": "Novo single do Artista X",
+    "comment": "A melodia é interessante, mas a letra não me cativou. Sinto que faltou a energia de trabalhos anteriores.",
+    "rating": 2,
+    "liked": false
+  },
+  {
+    "title": "Ouvindo 'Clube da Esquina'",
+    "comment": "Poesia pura em forma de música. Cada faixa é uma viagem. Obra-prima da MPB.",
+    "rating": 5,
+    "liked": true
+  },
+  {
+    "title": "Gostei muito!",
+    "comment": "",
+    "rating": 4,
+    "liked": true
+  }
+]
+
+[
+  {
+    "name": "Bruna Costa",
+    "bio": "Explorando o mundo do jazz e da bossa nova.",
+    "email": "bruna.costa@example.com",
+    "gender": "Feminino",
+    "password": "outraSenhaForte!@#"
+  },
+  {
+    "name": "Carlos Pereira",
+    "bio": "Fã de hip-hop dos anos 90 e colecionador de vinis.",
+    "email": "carlos.p@example.com",
+    "gender": "Masculino",
+    "password": "12345678"
+  },
+  {
+    "name": "Dani Oliveira",
+    "bio": "Apenas ouvindo.",
+    "email": "dani@example.com",
+    "gender": "Prefiro não informar",
+    "password": "dani_pass_2025"
+  },
+  {
+    "name": "Lucas Martins",
+    "bio": "Produtor musical e entusiasta de música eletrônica.",
+    "email": "lucas.martins.music@example.com",
+    "gender": "Masculino",
+    "password": "L_martinS#secure"
+  }
+]
